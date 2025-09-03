@@ -576,38 +576,38 @@
             <div class="form-box">
                 <p style="color: var(--dark-color);">اطلب الآن واستفد من العرض المحدود!</p>
                 
-                <form name="order" method="POST" data-netlify="true" action="thankyou.html">
-             <input type="hidden" name="form-name" value="order">
-                    
-                    <input type="hidden" name="selected_offer" id="selected-offer-input" value="single">
-                    
-                    <label for="offer-display" style="text-align: right; display: block; margin-bottom: 5px;">العرض المختار:</label>
-                    <input type="text" id="offer-display" name="offer-display" readonly>
-                    
-                    <input type="text" name="name" placeholder="الاسم الكامل" required>
-                    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
-                    <input type="text" name="address" placeholder="عنوان السكن (الشارع، الحي)" required>
-                    <select name="state" id="state-select" required>
-                        <option value="">اختر الولاية</option>
-                        <option value="العاصمة">العاصمة</option>
-                        <option value="البليدة">البليدة</option>
-                        <option value="بومرداس">بومرداس</option>
-                        <option value="سطيف">سطيف</option>
-                        <option value="قسنطينة">قسنطينة</option>
-                        <option value="عنابة">عنابة</option>
-                        <option value="وهران">وهران</option>
-                        <option value="عين الدفلة">عين الدفلة</option>
-                        <option value="مستغانم">مستغانم</option>
-                        <option value="المسيلة">المسيلة</option>
-                        <option value="تيزيوزو">تيزيوزو</option>
-                        <option value="بجاية">بجاية</option>
-                        <option value="المدية">المدية</option>
-                        <option value="بسكرة">بسكرة</option>
-                        <option value="البويرة">البويرة</option>
-                    </select>
-                    
-                    <button type="submit">تأكيد الطلب</button>
-                </form>
+               <form name="order" method="POST" data-netlify="true" action="thankyou.html" onsubmit="redirectToThankYou()">
+    <input type="hidden" name="form-name" value="order">
+    <input type="hidden" name="selected_offer" id="selected-offer-input" value="single">
+
+    <label for="offer-display" style="text-align: right; display: block; margin-bottom: 5px;">العرض المختار:</label>
+    <input type="text" id="offer-display" name="offer-display" readonly>
+
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <input type="text" name="address" placeholder="عنوان السكن (الشارع، الحي)" required>
+
+    <select name="state" id="state-select" required>
+        <option value="">اختر الولاية</option>
+        <option value="العاصمة">العاصمة</option>
+        <option value="البليدة">البليدة</option>
+        <option value="بومرداس">بومرداس</option>
+        <option value
+        <option value="بجاية">بجاية</option>
+        <option value="المدية">المدية</option>="سطيف">سطيف</option>
+        <option value="قسنطينة">قسنطينة</option>
+        <option value="عنابة">عنابة</option>
+        <option value="وهران">وهران</option>
+        <option value="عين الدفلة">عين الدفلة</option>
+        <option value="مستغانم">مستغانم</option>
+        <option value="المسيلة">المسيلة</option>
+        <option value="تيزيوزو">تيزيوزو</option>
+        <option value="بسكرة">بسكرة</option>
+        <option value="البويرة">البويرة</option>
+    </select>
+
+    <button type="submit">تأكيد الطلب</button>
+</form>
             </div>
             
             <div class="order-summary">
@@ -830,6 +830,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
