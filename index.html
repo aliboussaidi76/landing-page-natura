@@ -532,7 +532,54 @@
         }
     </style>
 </head>
-<body>
+<body><!-- شريط علوي للتنبيه -->
+<div class="top-banner">
+  <marquee behavior="scroll" direction="right" scrollamount="6">
+    ⏰ العرض ينتهي هذا الأسبوع! 🚨 سارع بالطلب الآن قبل نفاد الكمية!
+  </marquee>
+  <div class="top-buttons">
+    <a href="tel:+213600000000" class="phone-btn">📞 اتصل بنا</a>
+    <a href="https://wa.me/213600000000" target="_blank" class="whatsapp-btn">💬 واتساب</a>
+  </div>
+</div>
+
+<!-- مسافة إضافية لتفادي تغطية العنوان -->
+<div style="margin-top: 60px;"></div>
+
+<style>
+.top-banner {
+  background-color: #D32F2F; /* أحمر قوي */
+  color: white;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.top-buttons a {
+  margin-left: 6px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+}
+
+.top-buttons .phone-btn {
+  background-color: #1976D2; /* أزرق للهاتف */
+}
+
+.top-buttons .whatsapp-btn {
+  background-color: #25D366; /* أخضر واتساب */
+}
+</style>
+
     <header>
         <div class="container">
             <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
@@ -868,7 +915,11 @@ function redirectToThankYou() {
 }
 </style>
 </body>
+</style>
+
 </html>
+
+
 
 
 
