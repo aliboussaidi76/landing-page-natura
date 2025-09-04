@@ -867,8 +867,45 @@ function redirectToThankYou() {
   50% { transform: translateY(-8px); }
 }
 </style>
+<!-- زر اطلب الآن -->
+   <a href="#order" class="floating-btn">اطلب الآن</a>
+
+   <style>
+   .floating-btn {
+     position: fixed;
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     background-color: #CC5500; /* برتقالي داكن */
+     color: white;
+     padding: 15px 30px;
+     border-radius: 50px;
+     font-size: 20px;
+     font-weight: bold;
+     text-decoration: none;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+     z-index: 9999;
+     animation: swing 2s infinite ease-in-out;
+     transition: transform 0.2s ease-in-out;
+   }
+   .floating-btn:hover {
+     transform: translateX(-50%) scale(1.1);
+     background-color: #993d00; /* أغمق عند التمرير */
+   }
+
+   @keyframes swing {
+     0% { transform: translateX(-50%) rotate(0deg); }
+     25% { transform: translateX(-52%) rotate(-3deg); }
+     50% { transform: translateX(-50%) rotate(0deg); }
+     75% { transform: translateX(-48%) rotate(3deg); }
+     100% { transform: translateX(-50%) rotate(0deg); }
+   }
+   </style>
 </body>
 </html>
+
+
+
 
 
 
