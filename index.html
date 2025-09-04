@@ -833,8 +833,44 @@ function redirectToThankYou() {
   }, 500);
 }
 </script>
+<!-- زر اطلب الآن ثابت -->
+<a href="#order" class="floating-btn">اطلب الآن</a>
+
+<style>
+/* تنسيق الزر */
+.floating-btn {
+  position: fixed;
+  bottom: 20px; /* المسافة من الأسفل */
+  right: 20px;  /* المسافة من اليمين */
+  background-color: #FF6600; /* برتقالي غامق */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999; /* يخليه فوق كل العناصر */
+  animation: bounce 1.5s infinite; /* حركة */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* تأثير عند المرور */
+.floating-btn:hover {
+  transform: scale(1.1);
+  background-color: #e65c00;
+}
+
+/* أنيميشن التمايل */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+</style>
 </body>
 </html>
+
+
 
 
 
