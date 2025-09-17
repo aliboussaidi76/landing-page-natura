@@ -654,6 +654,15 @@
     }
   }
 </script>
+               <script>
+  document.getElementById("orderForm").addEventListener("submit", function(e) {
+    let phone = document.getElementById("phone").value;
+    if (phone.length !== 10) {
+      e.preventDefault(); // يوقف إرسال الفورم
+      alert("⚠️ من فضلك أدخل رقم هاتف صحيح من 10 أرقام.");
+    }
+  });
+</script> 
             </div>
             
             <div class="order-summary">
@@ -952,7 +961,9 @@ function redirectToThankYou() {
 
 
 
+
     
+
 
 
 
