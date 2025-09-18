@@ -680,19 +680,21 @@
   }
 </style>
 
-<form id="orderForm" 
-      action="https://docs.google.com/forms/d/e/1FAIpQLSey0reStrEVMgSwnsiM7cfGBHW-Hd-z0--pw6utolJsNE9nvA/formResponse" 
-      method="POST" 
+<!-- ===== انسخ هذا الكود كله و الصقه مكان الفورم القديم ===== -->
+
+<form id="orderForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSey0reStrEVMgSwnsiM7cfGBHW-Hd-z0--pw6utolJsNE9nvA/formResponse"
+      method="POST"
       target="hidden_iframe">
 
   <div class="form-group">
     <label>الاسم الكامل</label>
-    <input type="text" name="entry.2134948299" placeholder="أدخل اسمك الكامل" required>
+    <input type="text" name="entry.2134948299" placeholder="الاسم الكامل" required>
   </div>
 
   <div class="form-group">
     <label>رقم الهاتف</label>
-    <input type="tel" id="phone" name="entry.2129297352" placeholder="أدخل رقم الهاتف" required>
+    <input type="tel" id="phone" name="entry.2129297352" placeholder="05XXXXXXXX" required>
   </div>
 
   <div class="form-group">
@@ -702,22 +704,19 @@
       <option value="الجزائر العاصمة">الجزائر العاصمة</option>
       <option value="وهران">وهران</option>
       <option value="سطيف">سطيف</option>
-      <option value="قسنطينة">قسنطينة</option>
-      <option value="عنابة">عنابة</option>
-      <option value="باتنة">باتنة</option>
-      <!-- زيد باقي الولايات -->
+      <!-- زد باقي الولايات حسب حاجتك -->
     </select>
   </div>
 
-  <!-- ملخص الطلب -->
+  <!-- ملخص مرئي للزبون -->
   <div id="summary">
-    <p>سعر المنتج: <span id="productPrice">2000</span> دج</p>
-    <p>سعر التوصيل: <span id="shippingPrice">---</span></p>
-    <p>💰 المجموع الكلي: <span id="totalPrice">---</span></p>
+    سعر المنتج: <span id="productPrice">2000</span> دج —
+    توصيل: <span id="shippingPrice">---</span> —
+    المجموع: <span id="totalPrice">---</span>
   </div>
 
-  <!-- إدخال مخفي للمجموع الكلي -->
-  <input type="hidden" id="totalInput" name="entry.1217120028">
+  <!-- hidden input: يتسجل في Google Sheet كحقل المجموع الكلي -->
+  <input type="hidden" id="totalInput" name="entry.1277120028" value="">
 
   <button type="submit">تأكيد الطلب</button>
 </form>
@@ -725,37 +724,82 @@
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 <script>
-  const wilayaSelect = document.getElementById('wilaya');
-  const shippingSpan = document.getElementById('shippingPrice');
-  const totalSpan = document.getElementById('totalPrice');
-  const productPrice = parseInt(document.getElementById('productPrice').textContent);
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('orderForm');
+  const phoneInput = document.getElementById('phone');
+  const wilaya = document.getElementById('wilaya');
+  const shippingPriceSpan = document.getElementById('shippingPrice');
+  const totalPriceSpan = document.getElementById('totalPrice');
   const totalInput = document.getElementById('totalInput');
+  const productPrice = parseInt(document.getElementById('productPrice').textContent || '0', 10);
 
+  if (!form) { console.error('form with id="orderForm" not found'); return; }
+  if (!phoneInput) { console.error('phone input with id="phone" not found'); }
+  if (!wilaya) { console.error('select with id="wilaya" not found'); }
+
+  // جدول أسعار حسب الولاية (عدل و زد كما تحتاج)
   const shippingPrices = {
     "الجزائر العاصمة": 300,
     "وهران": 400,
-    "سطيف": 350,
-    "قسنطينة": 400,
-    "عنابة": 450,
-    "باتنة": 350
+    "سطيف": 350
     // زيد باقي الولايات
   };
 
-  wilayaSelect.addEventListener('change', function() {
-    const selected = this.value;
-    if (shippingPrices[selected]) {
-      const shipping = shippingPrices[selected];
+  // دالة لتحديث الأسعار و input المخفي
+  function updateTotals() {
+    const selected = wilaya.value;
+    const shipping = shippingPrices[selected] || 0;
+    if (shipping) {
+      shippingPriceSpan.textContent = shipping + ' دج';
       const total = productPrice + shipping;
-
-      shippingSpan.textContent = shipping + " دج";
-      totalSpan.textContent = total + " دج";
-      totalInput.value = total + " دج";
+      totalPriceSpan.textContent = total + ' دج';
+      if (totalInput) totalInput.value = total; // هذا يذهب إلى Google Sheet
     } else {
-      shippingSpan.textContent = "---";
-      totalSpan.textContent = "---";
-      totalInput.value = "";
+      shippingPriceSpan.textContent = '---';
+      totalPriceSpan.textContent = '---';
+      if (totalInput) totalInput.value = '';
+    }
+  }
+
+  // حدث تغيير الولاية
+  wilaya && wilaya.addEventListener('change', updateTotals);
+
+  // خاص بمنع التحويل الخاطئ: نستخدم علم ليعرف أن الإرسال فعلاً من هنا
+  let submittedByScript = false;
+
+  // التحقق عند submit
+  form.addEventListener('submit', function (e) {
+    // تحقق وجود العناصر الأساسية
+    if (!phoneInput) return; // لو ماكانش الحقل ما نديرش شي
+
+    const raw = (phoneInput.value || '').toString();
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length !== 10) {
+      e.preventDefault(); // أمنع الإرسال
+      alert('⚠️ من فضلك أدخل رقم هاتف صحيح مكوّن من 10 أرقام.');
+      phoneInput.focus();
+      return;
+    }
+
+    // تأكد أن المجموع محدث
+    updateTotals();
+
+    // ضع العلم واسمح للإرسال أن يستمر طبيعياً (لا ننفّذ form.submit() هنا)
+    submittedByScript = true;
+    // لا نعمل e.preventDefault() — نترك المتصفح يرسل الفورم إلى iframe
+  });
+
+  // بعد ما يستلم الiframe الرد من Google Forms
+  const iframe = document.getElementById('hidden_iframe');
+  iframe && iframe.addEventListener('load', function () {
+    if (submittedByScript) {
+      submittedByScript = false;
+      // تحويل للصفحة تاع الشكر
+      window.location.href = 'thankyou.html';
     }
   });
+
+});
 </script>
             </div>
             
@@ -1059,7 +1103,10 @@ function redirectToThankYou() {
 
 
 
+
+
     
+
 
 
 
