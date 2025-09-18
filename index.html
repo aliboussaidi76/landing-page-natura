@@ -682,124 +682,57 @@
 
 <!-- ===== انسخ هذا الكود كله و الصقه مكان الفورم القديم ===== -->
 
-<form id="orderForm"
-      action="https://docs.google.com/forms/d/e/1FAIpQLSepnNx6IBDOcwYu1h1ITUVMVdZ8-YGo7bj9MbEosnUDcyrDQg/formResponse"
-      method="POST"
-      target="hidden_iframe">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSepnNx6IBDOcwYu1h1ITUVMVdZ8-YGo7bj9MbEosnUDcyrDQg/formResponse">
 
-  <div class="form-group">
-    <label>الاسم الكامل</label>
-    <input type="text" name="entry.527034430" placeholder="الاسم الكامل" required>
-  </div>
+  <!-- الاسم الكامل -->
+  <label>الاسم الكامل</label><br>
+  <input type="text" name="entry.527034430" required><br><br>
 
-  <div class="form-group">
-    <label>رقم الهاتف</label>
-    <input type="tel" id="phone" name="entry.669654427" placeholder="05XXXXXXXX" required>
-  </div>
+  <!-- رقم الهاتف -->
+  <label>رقم الهاتف</label><br>
+  <input type="tel" name="entry.669654427" pattern="[0-9]{10}" required><br><br>
 
-  <div class="form-group">
-    <label>الولاية</label>
-    <select id="wilaya" name="entry.1308558217" required>
-      <option value="">-- اختر ولايتك --</option>
-      <option value="الجزائر العاصمة">الجزائر العاصمة</option>
-      <option value="وهران">وهران</option>
-      <option value="سطيف">سطيف</option>
-      <!-- زد باقي الولايات حسب حاجتك -->
-    </select>
-  </div>
+  <!-- الولاية -->
+  <label>الولاية</label><br>
+  <select id="wilaya" name="entry.1308558217" required onchange="calculateTotal()">
+    <option value="">اختر ولايتك</option>
+    <option value="الجزائر – 400 DA" data-price="400">الجزائر – 400 DA</option>
+    <option value="وهران – 500 DA" data-price="500">وهران – 500 DA</option>
+    <option value="قسنطينة – 600 DA" data-price="600">قسنطينة – 600 DA</option>
+  </select><br><br>
 
-  <!-- ملخص مرئي للزبون -->
-  <div id="summary">
-    سعر المنتج: <span id="productPrice">2000</span> دج —
-    توصيل: <span id="shippingPrice">---</span> —
-    المجموع: <span id="totalPrice">---</span>
-  </div>
+  <!-- المجموع الكلي -->
+  <label>المجموع الكلي (سعر المنتج + التوصيل)</label><br>
+  <input type="text" id="total" name="entry.1397734668" readonly><br><br>
 
-  <!-- hidden input: يتسجل في Google Sheet كحقل المجموع الكلي -->
-  <input type="hidden" id="totalInput" name="entry.1397734668" value="">
-
+  <!-- زر تأكيد الطلب -->
   <button type="submit">تأكيد الطلب</button>
 </form>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+<!-- iframe خفي باش ما يبانش فورم قوقل بعد الإرسال -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('orderForm');
-  const phoneInput = document.getElementById('phone');
-  const wilaya = document.getElementById('wilaya');
-  const shippingPriceSpan = document.getElementById('shippingPrice');
-  const totalPriceSpan = document.getElementById('totalPrice');
-  const totalInput = document.getElementById('totalInput');
-  const productPrice = parseInt(document.getElementById('productPrice').textContent || '0', 10);
+  var submitted = false;
+  var productPrice = 2000; // سعر المنتج الأساسي (غيره حسب منتجك)
 
-  if (!form) { console.error('form with id="orderForm" not found'); return; }
-  if (!phoneInput) { console.error('phone input with id="phone" not found'); }
-  if (!wilaya) { console.error('select with id="wilaya" not found'); }
+  function calculateTotal() {
+    var wilayaSelect = document.getElementById("wilaya");
+    var deliveryPrice = parseInt(wilayaSelect.options[wilayaSelect.selectedIndex].getAttribute("data-price")) || 0;
+    var total = productPrice + deliveryPrice;
+    document.getElementById("total").value = total + " DA";
+  }
 
-  // جدول أسعار حسب الولاية (عدل و زد كما تحتاج)
-  const shippingPrices = {
-    "الجزائر العاصمة": 300,
-    "وهران": 400,
-    "سطيف": 350
-    // زيد باقي الولايات
-  };
-
-  // دالة لتحديث الأسعار و input المخفي
-  function updateTotals() {
-    const selected = wilaya.value;
-    const shipping = shippingPrices[selected] || 0;
-    if (shipping) {
-      shippingPriceSpan.textContent = shipping + ' دج';
-      const total = productPrice + shipping;
-      totalPriceSpan.textContent = total + ' دج';
-      if (totalInput) totalInput.value = total; // هذا يذهب إلى Google Sheet
-    } else {
-      shippingPriceSpan.textContent = '---';
-      totalPriceSpan.textContent = '---';
-      if (totalInput) totalInput.value = '';
+  function redirectToThankYou() {
+    if (submitted) {
+      window.location = "thankyou.html"; // صفحة الشكر
     }
   }
 
-  // حدث تغيير الولاية
-  wilaya && wilaya.addEventListener('change', updateTotals);
-
-  // خاص بمنع التحويل الخاطئ: نستخدم علم ليعرف أن الإرسال فعلاً من هنا
-  let submittedByScript = false;
-
-  // التحقق عند submit
-  form.addEventListener('submit', function (e) {
-    // تحقق وجود العناصر الأساسية
-    if (!phoneInput) return; // لو ماكانش الحقل ما نديرش شي
-
-    const raw = (phoneInput.value || '').toString();
-    const digits = raw.replace(/\D/g, '');
-    if (digits.length !== 10) {
-      e.preventDefault(); // أمنع الإرسال
-      alert('⚠️ من فضلك أدخل رقم هاتف صحيح مكوّن من 10 أرقام.');
-      phoneInput.focus();
-      return;
-    }
-
-    // تأكد أن المجموع محدث
-    updateTotals();
-
-    // ضع العلم واسمح للإرسال أن يستمر طبيعياً (لا ننفّذ form.submit() هنا)
-    submittedByScript = true;
-    // لا نعمل e.preventDefault() — نترك المتصفح يرسل الفورم إلى iframe
+  // مراقبة الإرسال
+  document.querySelector("form").addEventListener("submit", function() {
+    setTimeout(redirectToThankYou, 500);
   });
-
-  // بعد ما يستلم الiframe الرد من Google Forms
-  const iframe = document.getElementById('hidden_iframe');
-  iframe && iframe.addEventListener('load', function () {
-    if (submittedByScript) {
-      submittedByScript = false;
-      // تحويل للصفحة تاع الشكر
-      window.location.href = 'thankyou.html';
-    }
-  });
-
-});
 </script>
             </div>
             
@@ -1106,7 +1039,12 @@ function redirectToThankYou() {
 
 
 
+
+
+
+
     
+
 
 
 
