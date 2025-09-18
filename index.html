@@ -635,34 +635,128 @@
             <div class="form-box">
                 <p style="color: var(--dark-color);">اطلب الآن واستفد من العرض المحدود!</p>
                 
-               <form action="https://docs.google.com/forms/d/e/1FAIpQLSey0reStrEVMgSwnsiM7cfGBHW-Hd-z0--pw6utolJsNE9nvA/formResponse" 
-      method="POST" target="hidden_iframe">
+               <style>
+  .form-group {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .form-group input, .form-group select {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  button {
+    background: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    background: #45a049;
+  }
+  #summary {
+    margin: 15px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #eef9ee;
+    font-weight: bold;
+  }
+</style>
 
-  <input type="text" name="entry.2134948299" placeholder="الاسم الكامل" required><br><br>
-  <input type="text" name="entry.2129297352" placeholder="رقم الهاتف" required><br><br>
-  <input type="text" name="entry.316484263" placeholder="الولاية" required><br><br>
+<form id="orderForm" 
+      action="https://docs.google.com/forms/d/e/XXXXXX/formResponse" 
+      method="POST" 
+      target="hidden_iframe">
+
+  <div class="form-group">
+    <label>الاسم الكامل</label>
+    <input type="text" name="entry.111111" placeholder="أدخل اسمك الكامل" required>
+  </div>
+
+  <div class="form-group">
+    <label>رقم الهاتف</label>
+    <input type="tel" id="phone" name="entry.222222" placeholder="أدخل رقم الهاتف" required>
+  </div>
+
+  <div class="form-group">
+    <label>الولاية</label>
+    <select id="wilaya" name="entry.333333" required>
+      <option value="">-- اختر ولايتك --</option>
+      <option value="الجزائر العاصمة">الجزائر العاصمة</option>
+      <option value="وهران">وهران</option>
+      <option value="سطيف">سطيف</option>
+      <option value="قسنطينة">قسنطينة</option>
+      <option value="عنابة">عنابة</option>
+      <option value="باتنة">باتنة</option>
+      <!-- زيد باقي الولايات -->
+    </select>
+  </div>
+
+  <!-- ملخص الطلب -->
+  <div id="summary">
+    <p>سعر المنتج: <span id="productPrice">2000</span> دج</p>
+    <p>سعر التوصيل: <span id="shippingPrice">---</span></p>
+    <p>💰 المجموع الكلي: <span id="totalPrice">---</span></p>
+  </div>
+
+  <!-- إدخال مخفي للمجموع الكلي -->
+  <input type="hidden" id="totalInput" name="entry.444444">
 
   <button type="submit">تأكيد الطلب</button>
 </form>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="redirectToThankYou()"></iframe>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 <script>
-  function redirectToThankYou() {
-    if(document.activeElement.tagName === "BUTTON"){
-      window.location.href = "thankyou.html";
-    }
-  }
-</script>
-               <script>
-  document.getElementById("orderForm").addEventListener("submit", function(e) {
-    let phone = document.getElementById("phone").value;
-    if (phone.length !== 10) {
-      e.preventDefault(); // يوقف إرسال الفورم
-      alert("⚠️ من فضلك أدخل رقم هاتف صحيح من 10 أرقام.");
+  const wilayaSelect = document.getElementById('wilaya');
+  const shippingSpan = document.getElementById('shippingPrice');
+  const totalSpan = document.getElementById('totalPrice');
+  const productPrice = parseInt(document.getElementById('productPrice').textContent);
+  const totalInput = document.getElementById('totalInput');
+
+  const shippingPrices = {
+    "الجزائر العاصمة": 300,
+    "وهران": 400,
+    "سطيف": 350,
+    "قسنطينة": 400,
+    "عنابة": 450,
+    "باتنة": 350
+    // زيد باقي الولايات
+  };
+
+  wilayaSelect.addEventListener('change', function() {
+    const selected = this.value;
+    if (shippingPrices[selected]) {
+      const shipping = shippingPrices[selected];
+      const total = productPrice + shipping;
+
+      shippingSpan.textContent = shipping + " دج";
+      totalSpan.textContent = total + " دج";
+      totalInput.value = total + " دج";
+    } else {
+      shippingSpan.textContent = "---";
+      totalSpan.textContent = "---";
+      totalInput.value = "";
     }
   });
-</script> 
+</script>
             </div>
             
             <div class="order-summary">
@@ -962,7 +1056,9 @@ function redirectToThankYou() {
 
 
 
+
     
+
 
 
 
