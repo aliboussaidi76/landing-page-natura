@@ -716,16 +716,17 @@
 
   <!-- الاسم الكامل -->
   <label>الاسم الكامل</label>
-  <input type="text" name="entry.527034430" required>
+  <input type="text" name="entry.527034430" placeholder="الاسم الكامل" required>
 
   <!-- رقم الهاتف -->
   <label>رقم الهاتف</label>
-  <input type="tel" name="entry.669654427" pattern="[0-9]{10}" required>
+  <input type="tel" name="entry.669654427" placeholder=")رقم الهاتف
+      10(أرقام "  pattern="[0-9]{10}" required>
 
   <!-- الولاية -->
   <label>الولاية</label>
   <select id="wilaya" name="entry.1308558217" required onchange="calculateTotal()">
-    <option value="">اختر ولايتك</option>
+    <option value="" disabled selected>اختر ولايتك</option>
     <option value="01 الجزائر – 400 DA" data-price="400">01 الجزائر – 400 DA</option>
     <option value="02 الشلف – 500 DA" data-price="500">02 الشلف – 500 DA</option>
     <option value="03 الأغواط – 600 DA" data-price="600">03 الأغواط – 600 DA</option>
@@ -1111,7 +1112,9 @@ function redirectToThankYou() {
 
 
 
+
     
+
 
 
 
