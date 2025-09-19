@@ -682,84 +682,113 @@
 
 <!-- ===== انسخ هذا الكود كله و الصقه مكان الفورم القديم ===== -->
 
-<form id="orderForm" action="https://docs.google.com/forms/d/e/1FAIpQLSepnNx6IBDOcwYu1h1ITUVMVdZ8-YGo7bj9MbEosnUDcyrDQg/formResponse">
+<style>
+  input, select {
+    width: 220px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 12px;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+  }
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #218838;
+  }
+</style>
+
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSepnNx6IBDOcwYu1h1ITUVMVdZ8-YGo7bj9MbEosnUDcyrDQg/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="submitted=true;">
 
   <!-- الاسم الكامل -->
-  <label>الاسم الكامل</label><br>
-  <input type="text" name="entry.527034430" required><br><br>
+  <label>الاسم الكامل</label>
+  <input type="text" name="entry.527034430" required>
 
   <!-- رقم الهاتف -->
-  <label>رقم الهاتف</label><br>
-  <input type="tel" name="entry.669654427" pattern="[0-9]{10}" required><br><br>
+  <label>رقم الهاتف</label>
+  <input type="tel" name="entry.669654427" pattern="[0-9]{10}" required>
 
   <!-- الولاية -->
-  <label>الولاية</label><br>
+  <label>الولاية</label>
   <select id="wilaya" name="entry.1308558217" required onchange="calculateTotal()">
     <option value="">اختر ولايتك</option>
-    <option value="أدرار – 700 DA" data-price="700">أدرار – 700 DA</option>
-    <option value="الشلف – 500 DA" data-price="500">الشلف – 500 DA</option>
-    <option value="الأغواط – 600 DA" data-price="600">الأغواط – 600 DA</option>
-    <option value="أم البواقي – 600 DA" data-price="600">أم البواقي – 600 DA</option>
-    <option value="باتنة – 600 DA" data-price="600">باتنة – 600 DA</option>
-    <option value="بجاية – 500 DA" data-price="500">بجاية – 500 DA</option>
-    <option value="بسكرة – 600 DA" data-price="600">بسكرة – 600 DA</option>
-    <option value="بشار – 700 DA" data-price="700">بشار – 700 DA</option>
-    <option value="البليدة – 400 DA" data-price="400">البليدة – 400 DA</option>
-    <option value="البويرة – 500 DA" data-price="500">البويرة – 500 DA</option>
-    <option value="تمنراست – 800 DA" data-price="800">تمنراست – 800 DA</option>
-    <option value="تبسة – 600 DA" data-price="600">تبسة – 600 DA</option>
-    <option value="تلمسان – 600 DA" data-price="600">تلمسان – 600 DA</option>
-    <option value="تيارت – 500 DA" data-price="500">تيارت – 500 DA</option>
-    <option value="تيزي وزو – 400 DA" data-price="400">تيزي وزو – 400 DA</option>
-    <option value="الجزائر – 400 DA" data-price="400">الجزائر – 400 DA</option>
-    <option value="الجلفة – 600 DA" data-price="600">الجلفة – 600 DA</option>
-    <option value="جيجل – 500 DA" data-price="500">جيجل – 500 DA</option>
-    <option value="سطيف – 500 DA" data-price="500">سطيف – 500 DA</option>
-    <option value="سعيدة – 600 DA" data-price="600">سعيدة – 600 DA</option>
-    <option value="سكيكدة – 600 DA" data-price="600">سكيكدة – 600 DA</option>
-    <option value="سيدي بلعباس – 600 DA" data-price="600">سيدي بلعباس – 600 DA</option>
-    <option value="عنابة – 600 DA" data-price="600">عنابة – 600 DA</option>
-    <option value="قالمة – 600 DA" data-price="600">قالمة – 600 DA</option>
-    <option value="قسنطينة – 600 DA" data-price="600">قسنطينة – 600 DA</option>
-    <option value="المدية – 500 DA" data-price="500">المدية – 500 DA</option>
-    <option value="مستغانم – 500 DA" data-price="500">مستغانم – 500 DA</option>
-    <option value="المسيلة – 500 DA" data-price="500">المسيلة – 500 DA</option>
-    <option value="معسكر – 500 DA" data-price="500">معسكر – 500 DA</option>
-    <option value="ورقلة – 600 DA" data-price="600">ورقلة – 600 DA</option>
-    <option value="وهران – 500 DA" data-price="500">وهران – 500 DA</option>
-    <option value="البيض – 600 DA" data-price="600">البيض – 600 DA</option>
-    <option value="إليزي – 800 DA" data-price="800">إليزي – 800 DA</option>
-    <option value="برج بوعريريج – 500 DA" data-price="500">برج بوعريريج – 500 DA</option>
-    <option value="بومرداس – 400 DA" data-price="400">بومرداس – 400 DA</option>
-    <option value="الطارف – 600 DA" data-price="600">الطارف – 600 DA</option>
-    <option value="تندوف – 800 DA" data-price="800">تندوف – 800 DA</option>
-    <option value="تيسمسيلت – 500 DA" data-price="500">تيسمسيلت – 500 DA</option>
-    <option value="الوادي – 600 DA" data-price="600">الوادي – 600 DA</option>
-    <option value="خنشلة – 600 DA" data-price="600">خنشلة – 600 DA</option>
-    <option value="سوق أهراس – 600 DA" data-price="600">سوق أهراس – 600 DA</option>
-    <option value="تيبازة – 400 DA" data-price="400">تيبازة – 400 DA</option>
-    <option value="ميلة – 500 DA" data-price="500">ميلة – 500 DA</option>
-    <option value="عين الدفلى – 500 DA" data-price="500">عين الدفلى – 500 DA</option>
-    <option value="النعامة – 700 DA" data-price="700">النعامة – 700 DA</option>
-    <option value="عين تموشنت – 500 DA" data-price="500">عين تموشنت – 500 DA</option>
-    <option value="غرداية – 600 DA" data-price="600">غرداية – 600 DA</option>
-    <option value="غليزان – 500 DA" data-price="500">غليزان – 500 DA</option>
-  </select><br><br>
+    <option value="01 الجزائر – 400 DA" data-price="400">01 الجزائر – 400 DA</option>
+    <option value="02 الشلف – 500 DA" data-price="500">02 الشلف – 500 DA</option>
+    <option value="03 الأغواط – 600 DA" data-price="600">03 الأغواط – 600 DA</option>
+    <option value="04 أم البواقي – 600 DA" data-price="600">04 أم البواقي – 600 DA</option>
+    <option value="05 باتنة – 600 DA" data-price="600">05 باتنة – 600 DA</option>
+    <option value="06 بجاية – 500 DA" data-price="500">06 بجاية – 500 DA</option>
+    <option value="07 بسكرة – 600 DA" data-price="600">07 بسكرة – 600 DA</option>
+    <option value="08 بشار – 700 DA" data-price="700">08 بشار – 700 DA</option>
+    <option value="09 البليدة – 400 DA" data-price="400">09 البليدة – 400 DA</option>
+    <option value="10 البويرة – 500 DA" data-price="500">10 البويرة – 500 DA</option>
+    <option value="11 تمنراست – 800 DA" data-price="800">11 تمنراست – 800 DA</option>
+    <option value="12 تبسة – 600 DA" data-price="600">12 تبسة – 600 DA</option>
+    <option value="13 تلمسان – 500 DA" data-price="500">13 تلمسان – 500 DA</option>
+    <option value="14 تيارت – 500 DA" data-price="500">14 تيارت – 500 DA</option>
+    <option value="15 تيزي وزو – 500 DA" data-price="500">15 تيزي وزو – 500 DA</option>
+    <option value="16 الجزائر – 400 DA" data-price="400">16 الجزائر – 400 DA</option>
+    <option value="17 الجلفة – 600 DA" data-price="600">17 الجلفة – 600 DA</option>
+    <option value="18 جيجل – 500 DA" data-price="500">18 جيجل – 500 DA</option>
+    <option value="19 سطيف – 500 DA" data-price="500">19 سطيف – 500 DA</option>
+    <option value="20 سعيدة – 600 DA" data-price="600">20 سعيدة – 600 DA</option>
+    <option value="21 سكيكدة – 600 DA" data-price="600">21 سكيكدة – 600 DA</option>
+    <option value="22 سيدي بلعباس – 500 DA" data-price="500">22 سيدي بلعباس – 500 DA</option>
+    <option value="23 عنابة – 600 DA" data-price="600">23 عنابة – 600 DA</option>
+    <option value="24 قالمة – 600 DA" data-price="600">24 قالمة – 600 DA</option>
+    <option value="25 قسنطينة – 600 DA" data-price="600">25 قسنطينة – 600 DA</option>
+    <option value="26 المدية – 500 DA" data-price="500">26 المدية – 500 DA</option>
+    <option value="27 مستغانم – 500 DA" data-price="500">27 مستغانم – 500 DA</option>
+    <option value="28 المسيلة – 600 DA" data-price="600">28 المسيلة – 600 DA</option>
+    <option value="29 معسكر – 500 DA" data-price="500">29 معسكر – 500 DA</option>
+    <option value="30 ورقلة – 700 DA" data-price="700">30 ورقلة – 700 DA</option>
+    <option value="31 وهران – 500 DA" data-price="500">31 وهران – 500 DA</option>
+    <option value="32 البيض – 700 DA" data-price="700">32 البيض – 700 DA</option>
+    <option value="33 إليزي – 800 DA" data-price="800">33 إليزي – 800 DA</option>
+    <option value="34 برج بوعريريج – 600 DA" data-price="600">34 برج بوعريريج – 600 DA</option>
+    <option value="35 بومرداس – 500 DA" data-price="500">35 بومرداس – 500 DA</option>
+    <option value="36 الطارف – 600 DA" data-price="600">36 الطارف – 600 DA</option>
+    <option value="37 تندوف – 800 DA" data-price="800">37 تندوف – 800 DA</option>
+    <option value="38 تسمسيلت – 600 DA" data-price="600">38 تسمسيلت – 600 DA</option>
+    <option value="39 الوادي – 700 DA" data-price="700">39 الوادي – 700 DA</option>
+    <option value="40 خنشلة – 600 DA" data-price="600">40 خنشلة – 600 DA</option>
+    <option value="41 سوق أهراس – 600 DA" data-price="600">41 سوق أهراس – 600 DA</option>
+    <option value="42 تيبازة – 500 DA" data-price="500">42 تيبازة – 500 DA</option>
+    <option value="43 ميلة – 600 DA" data-price="600">43 ميلة – 600 DA</option>
+    <option value="44 عين الدفلى – 500 DA" data-price="500">44 عين الدفلى – 500 DA</option>
+    <option value="45 النعامة – 700 DA" data-price="700">45 النعامة – 700 DA</option>
+    <option value="46 عين تموشنت – 500 DA" data-price="500">46 عين تموشنت – 500 DA</option>
+    <option value="47 غرداية – 700 DA" data-price="700">47 غرداية – 700 DA</option>
+    <option value="48 غليزان – 500 DA" data-price="500">48 غليزان – 500 DA</option>
+  </select>
 
   <!-- المجموع الكلي -->
-  <label>المجموع الكلي (سعر المنتج + التوصيل)</label><br>
-  <input type="text" id="total" name="entry.1397734668" readonly><br><br>
+  <label>المجموع الكلي (سعر المنتج + التوصيل)</label>
+  <input type="text" id="total" name="entry.1397734668" readonly>
 
-  <!-- زر تأكيد الطلب -->
   <button type="submit">تأكيد الطلب</button>
 </form>
 
-<!-- iframe خفي يمنع فتح Google Form -->
-<iframe name="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thankyou.html';}"></iframe>
+<iframe name="hidden_iframe" style="display:none;"
+        onload="if(submitted) {window.location='thankyou.html';}"></iframe>
 
 <script>
   var submitted = false;
-  var productPrice = 2000; // ✅ غيره بسعر منتجك (DA)
+  var productPrice = 2000; // غيّر هذا بسعر منتجك
 
   function calculateTotal() {
     var wilayaSelect = document.getElementById("wilaya");
@@ -1080,7 +1109,10 @@ function redirectToThankYou() {
 
 
 
+
+
     
+
 
 
 
