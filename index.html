@@ -1,129 +1,100 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>خلطة العسل وحبوب اللقاح للأطفال — دعم النمو، التركيز والنوم | مناحل وعسل آل البوسعيدي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>خلطة العسل وحبوب اللقاح للأطفال — دعم النمو والتركيز | مناحل وعسل آل البوسعيدي</title>
 
   <!-- SEO -->
-  <meta name="description" content="اطلب خلطة العسل وحبوب اللقاح للأطفال من مناحل وعسل آل البوسعيدي — تركيبة طبيعية لتعزيز النمو، التركيز، النشاط الذهني والنوم الهادئ. توصيل سريع والدفع عند الاستلام." />
-  <meta name="keywords" content="عسل للأطفال, خلطة العسل, حبوب اللقاح, غذاء ملكات النحل, عسل السدر, عسل الأزهار, نمو الأطفال, زيادة التركيز, مناحل آل البوسعيدي" />
-  <meta property="og:title" content="خلطة العسل وحبوب اللقاح للأطفال — دعم النمو والتركيز" />
-  <meta property="og:description" content="خلطة طبيعية من العسل الجبلي، حبوب اللقاح وغذاء الملكات لدعم نشاط الطفل وتركيزه. التوصيل سريع والدفع عند الاستلام." />
-  <meta property="og:image" content="product.jpg" />
+  <meta name="description" content="اطلب خلطة العسل وحبوب اللقاح للأطفال لتعزيز النمو، التركيز، النشاط الذهني والنوم الهادئ — منتج طبيعي من مناحل موثوقة. توصيل سريع والدفع عند الاستلام.">
+  <meta name="keywords" content="عسل للأطفال, خلطة العسل, حبوب اللقاح, غذاء ملكات النحل, عسل السدر, عسل الأزهار, نمو الأطفال, زيادة التركيز, مناحل آل البوسعيدي">
+  <meta property="og:title" content="خلطة العسل وحبوب اللقاح للأطفال — دعم النمو والتركيز">
+  <meta property="og:description" content="خلطة طبيعية مدعومة من مناحل آل البوسعيدي لتعزيز النشاط والتركيز والنوم الهادئ للأطفال. التوصيل سريع والدفع عند الاستلام.">
+  <meta property="og:image" content="product.jpg">
 
-  <!-- Font -->
+  <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#fff8ea;            /* warm honey background */
-      --card:#ffffff;
-      --accent:#c67a00;        /* golden accent */
-      --accent-dark:#9a5d00;
-      --muted:#6b6b6b;
-      --maxw:1100px;
-      --radius:12px;
-      --shadow: 0 8px 24px rgba(20,20,20,0.06);
-      --text:#222;
+      --bg:#fff8ea; --card:#ffffff; --accent:#2fa83d; /* confirm button green */ 
+      --accent-gold:#c67a00; --muted:#6b6b6b; --radius:12px; --shadow:0 8px 24px rgba(20,20,20,0.06);
+      --maxw:1100px; --text:#222;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Inter", Tahoma, Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      line-height:1.55;
-    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:"Inter",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
     a{color:inherit}
-    .wrap{width:94%; max-width:var(--maxw); margin:0 auto; padding:16px;}
+    .wrap{width:94%;max-width:var(--maxw);margin:0 auto;padding:16px}
 
-    /* Topbar */
-    .topbar{
-      background:#e03f2f; color:#fff;
-      padding:10px 14px; text-align:center; font-weight:700;
-      border-radius:10px; margin-top:12px;
-    }
+    /* topbar */
+    .topbar{background:#e03f2f;color:#fff;padding:10px;border-radius:10px;text-align:center;font-weight:700;margin-top:12px}
 
-    /* contact fixed */
-    .contact-fixed{position:fixed; left:14px; top:90px; display:flex; flex-direction:column; gap:10px; z-index:999}
-    .contact-fixed a{display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; text-decoration:none; color:#fff; font-size:18px}
-    .wa{background:#25D366}
-    .phone{background:#007bff}
-    @media (max-width:760px){ .contact-fixed{left:auto; right:14px; bottom:120px; top:auto; flex-direction:row} }
+    /* sticky contact */
+    .contact-fixed{position:fixed;left:14px;top:90px;display:flex;flex-direction:column;gap:10px;z-index:999}
+    .contact-fixed a{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;text-decoration:none;color:#fff;font-size:18px}
+    .wa{background:#25D366} .phone{background:#007bff}
+    @media(max-width:760px){.contact-fixed{left:auto;right:14px;bottom:120px;top:auto;flex-direction:row}}
 
     /* hero */
-    .hero{background:var(--card); padding:20px; border-radius:var(--radius); box-shadow:var(--shadow); margin-top:18px; text-align:center}
-    .hero img.product{width:170px; max-width:46%; height:auto; display:block; margin:0 auto 12px; border-radius:10px}
-    .hero h1{margin:6px 0; font-size:24px; font-weight:800; color:#263238}
-    .hero h2{margin:6px 0; font-size:15px; color:var(--muted); font-weight:600}
-    .hero p.lead{max-width:920px; margin:10px auto; color:#333; font-size:15px}
+    .hero{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;margin-top:18px}
+    .hero img.product{width:180px;max-width:48%;height:auto;margin:0 auto 12px;border-radius:10px;display:block}
+    .hero h1{margin:6px 0;font-size:24px;font-weight:800;color:#263238}
+    .hero h2{margin:6px 0;font-size:15px;color:var(--muted);font-weight:600}
+    .hero p.lead{max-width:920px;margin:10px auto;color:#333;font-size:15px}
 
-    /* layout columns */
-    .cols{display:grid; grid-template-columns:1fr 420px; gap:20px; margin-top:18px; align-items:start}
-    @media (max-width:980px){ .cols{grid-template-columns:1fr} }
+    /* layout */
+    .cols{display:grid;grid-template-columns:1fr 420px;gap:20px;margin-top:18px;align-items:start}
+    @media(max-width:980px){.cols{grid-template-columns:1fr}}
 
     /* form card */
-    .card{background:var(--card); padding:18px; border-radius:var(--radius); box-shadow:var(--shadow)}
-    .label{font-weight:700; display:block; margin-bottom:6px; color:#333}
-    input[type=text], input[type=tel], select{
-      width:100%; padding:12px 10px; border-radius:10px; border:1px solid #f0dca9; font-size:15px; background:#fff;
-    }
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hint{font-weight:700;margin-bottom:10px}
+    .label{font-weight:700;display:block;margin-bottom:6px;color:#333}
+    input[type=text],input[type=tel],select{width:100%;padding:12px;border-radius:10px;border:1px solid #f0dca9;font-size:15px;background:#fff}
     .field{margin-bottom:12px}
-    .upsells{display:grid; grid-template-columns:1fr 1fr; gap:10px}
-    @media (max-width:560px){ .upsells{grid-template-columns:1fr} }
-    .upsell-item{display:flex; gap:10px; align-items:center; padding:8px; border-radius:10px; border:1px solid #f0e3c6; background:#fff}
-    .upsell-item img{width:64px; height:64px; object-fit:cover; border-radius:8px}
+    .summary-card{background:#fff;padding:12px;border-radius:8px;border:1px solid #f0e3c6;margin-top:12px}
+    .summary-row{display:flex;justify-content:space-between;padding:6px 0;font-size:15px}
+    .summary-total{font-size:18px;font-weight:800;color:var(--accent-gold)}
 
-    .summary-card{background:#fff; padding:12px; border-radius:8px; border:1px solid #f0e3c6; margin-top:12px}
-    .summary-row{display:flex; justify-content:space-between; padding:6px 0; font-size:15px}
-    .summary-total{font-size:18px; font-weight:800; color:var(--accent)}
+    /* confirm button (green) */
+    .confirm-btn{width:100%;padding:14px;background:var(--accent);color:#fff;border:0;border-radius:10px;font-size:16px;cursor:pointer;margin-top:10px}
+    .confirm-btn:active{transform:translateY(1px)}
 
-    .primary{width:100%; padding:14px; background:var(--accent); color:#fff; border:0; border-radius:10px; font-size:16px; cursor:pointer; margin-top:10px}
-    .primary:active{transform:translateY(1px)}
-    .tiny{font-size:13px; color:var(--muted)}
+    /* upsells (after confirm) */
+    .upsells-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+    .upsell-card{background:var(--card);padding:12px;border-radius:10px;border:1px solid #f0e1b8;text-align:center}
+    .upsell-card img{width:100%;max-width:140px;height:auto;margin:0 auto 8px;border-radius:8px}
+    .upsell-card h4{margin:8px 0;font-size:16px}
+    .add-ask{font-size:13px;color:var(--muted);margin-top:8px}
 
     /* related products */
-    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px}
-    .prod-card{background:var(--card); padding:12px; text-align:center; border-radius:10px; border:1px solid #f0e1b8}
-    .prod-card img{width:100%; max-width:140px; height:auto; margin:0 auto 8px; border-radius:8px}
-    .prod-card h4{margin:6px 0; font-size:16px}
-    .prod-card p.price{font-weight:800; color:var(--accent); margin:6px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .prod-card{background:var(--card);padding:12px;text-align:center;border-radius:10px;border:1px solid #f0e1b8}
+    .prod-card img{width:100%;max-width:140px;height:auto;margin:0 auto 8px;border-radius:8px}
 
     /* sections */
     .section{margin-top:26px}
-    .section h3{text-align:center; margin-bottom:14px; font-size:20px}
-    .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px}
-    .feature{background:var(--card); padding:14px; border-radius:10px; border:1px solid #f0e1b8}
-    .ingredients{display:flex; flex-wrap:wrap; gap:14px; justify-content:center}
-    .ingredient{width:140px; text-align:center; background:var(--card); padding:10px; border-radius:8px; border:1px solid #f0e1b8}
-    .ingredient img{width:100%; height:90px; object-fit:cover; border-radius:8px}
+    .section h3{text-align:center;margin-bottom:14px;font-size:20px}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .feature{background:var(--card);padding:14px;border-radius:10px;border:1px solid #f0e1b8}
+    .ingredients{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+    .ingredient{width:140px;text-align:center;background:var(--card);padding:10px;border-radius:8px;border:1px solid #f0e1b8}
+    .ingredient img{width:100%;height:90px;object-fit:cover;border-radius:8px}
+    .hero-image{display:block;margin:18px auto;max-width:900px;width:100%;border-radius:10px}
 
-    .hero-image{display:block; margin:18px auto; max-width:900px; width:100%; border-radius:10px}
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .testi{background:var(--card);padding:12px;border-radius:8px;border:1px solid #f0e1b8}
 
-    .testimonials{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px}
-    .testi{background:var(--card); padding:12px; border-radius:8px; border:1px solid #f0e1b8}
+    .trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .policy{background:var(--card);padding:12px;border-radius:8px;border:1px solid #f0e1b8}
 
-    .trust-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:12px}
-    .policy{background:var(--card); padding:12px; border-radius:8px; border:1px solid #f0e1b8}
-
-    footer{margin-top:28px; padding:18px; text-align:center; background:#111; color:#fff; border-radius:8px}
+    footer{margin-top:28px;padding:18px;text-align:center;background:#111;color:#fff;border-radius:8px}
 
     /* sticky order button */
-    .sticky-order{
-      position:fixed; right:18px; bottom:18px; z-index:9999;
-      background:var(--accent); color:#fff; padding:12px 14px; border-radius:50px; box-shadow:0 8px 20px rgba(0,0,0,0.15); border:0; font-weight:700; cursor:pointer;
-    }
-    @media(min-width:980px){ .sticky-order{right:18px; bottom:18px} }
-    @media(max-width:480px){ .sticky-order{right:12px; bottom:12px; padding:12px 14px} }
+    .sticky-order{position:fixed;right:18px;bottom:18px;z-index:9999;background:var(--accent);color:#fff;padding:12px 14px;border-radius:50px;box-shadow:0 8px 20px rgba(0,0,0,0.15);border:0;font-weight:700;cursor:pointer}
+    @media(min-width:980px){.sticky-order{right:18px;bottom:18px}} @media(max-width:480px){.sticky-order{right:12px;bottom:12px;padding:12px 14px}}
 
-    /* center on small screens */
-    @media (max-width:760px){
-      .hero, .card, .section, .prod-card { text-align:center; }
-      .wrap { padding:12px; }
-    }
+    @media(max-width:760px){.hero,.card,.section,.prod-card{text-align:center}.wrap{padding:12px}}
   </style>
 </head>
 <body>
@@ -132,34 +103,34 @@
     <div class="topbar">عرض محدود — التوصيل مجاني عند شراء 3 عبوات فأكثر • الدفع عند الاستلام</div>
   </div>
 
-  <!-- Contact fixed -->
-  <div class="contact-fixed" aria-hidden="false">
+  <!-- sticky contact -->
+  <div class="contact-fixed">
     <a class="wa" href="https://wa.me/213555000000" target="_blank" rel="noopener" title="واتساب">💬</a>
     <a class="phone" href="tel:+213555000000" title="اتصل">📞</a>
   </div>
 
   <div class="wrap">
     <!-- HERO -->
-    <div class="hero" id="hero">
+    <div class="hero">
       <img class="product" src="product.jpg" alt="خلطة العسل وحبوب اللقاح للأطفال">
-      <h1>خلطة العسل وحبوب اللقاح للأطفال — مزيج طبيعي مدعوم من مناحل آل البوسعيدي للنمو والتركيز</h1>
-      <h2>تركيبة مختارة لتعزيز النشاط الذهني، الحفظ، النوم الهادئ وزيادة الشهية — طبيعي وآمن للأطفال</h2>
-      <p class="lead">منتج مختار بعناية من العسل الجبلي، حبوب اللقاح وغذاء الملكات. <strong>للطلب اكتب معلوماتك أسفله</strong>.</p>
+      <h1>خلطة العسل وحبوب اللقاح للأطفال — تركيبة مغذية لدعم النمو والتركيز والنوم الهادئ</h1>
+      <h2>عسل جبلي نقي + حبوب لقاح طازجة + غذاء ملكات — منتج آمن ومحبوب لدى الأطفال</h2>
+      <p class="lead">مزيج طبيعي مدروس لتحسين الحيوية والتركيز لدى الأطفال. <strong>للطلب اختر العرض الذي يناسبك ثم اكتب معلوماتك في الخانات أسفله.</strong></p>
     </div>
 
     <!-- columns -->
     <div class="cols">
-      <!-- LEFT: content -->
+      <!-- LEFT content -->
       <main>
         <div class="section">
           <h3>فوائد الخلطة (تفصيل)</h3>
           <div class="features">
-            <div class="feature"><strong>دعم النمو</strong><p>مصادر سكريات نباتية ومعادن تساعد على النشاط اليومي وتغذية الطفل بشكل طبيعي.</p></div>
-            <div class="feature"><strong>تحسين التركيز</strong><p>مكونات مختارة لدعم الانتباه أثناء الدراسة والأنشطة اليومية.</p></div>
-            <div class="feature"><strong>نشاط ذهني متوازن</strong><p>طاقة مستمرة دون إرهاق تساهم في اليقظة والتركيز.</p></div>
-            <div class="feature"><strong>نوم هادئ</strong><p>تناول متوازن يساعد على الاسترخاء ليلاً لدى بعض الأطفال.</p></div>
-            <div class="feature"><strong>زيادة الشهية</strong><p>نكهة طيبة ومحببة لدى الأطفال تساعد على تناول الطعام.</p></div>
-            <div class="feature"><strong>مؤشرات الجودة</strong><p>مناحل موثوقة وفحوص جودة قبل التعبئة.</p></div>
+            <div class="feature"><strong>دعم النمو</strong><p>مصادر سكريات نباتية ومعادن تساعد على النشاط اليومي.</p></div>
+            <div class="feature"><strong>تحسين التركيز</strong><p>مكونات مختارة لدعم الانتباه أثناء التعلم.</p></div>
+            <div class="feature"><strong>نشاط ذهني متوازن</strong><p>طاقة معتدلة دون إجهاد.</p></div>
+            <div class="feature"><strong>نوم هادئ</strong><p>تناول متوازن قد يساعد على استرخاء الطفل ليلاً.</p></div>
+            <div class="feature"><strong>زيادة الشهية</strong><p>نكهة محببة تشجع على تناول الوجبات.</p></div>
+            <div class="feature"><strong>ضمان الجودة</strong><p>مناحل موثوقة وفحوص قبل التعبئة.</p></div>
           </div>
         </div>
 
@@ -167,9 +138,9 @@
           <h3>المكونات الرئيسية</h3>
           <div class="ingredients">
             <div class="ingredient"><img src="honey.jpg" alt="العسل الجبلي"><p>العسل الجبلي</p></div>
-            <div class="ingredient"><img src="pollen.jpg" alt="حبوب اللقاح"><p>حبوب اللقاح الطازجة</p></div>
+            <div class="ingredient"><img src="pollen.jpg" alt="حبوب اللقاح"><p>حبوب اللقاح</p></div>
             <div class="ingredient"><img src="royaljelly.jpg" alt="غذاء ملكات النحل"><p>غذاء ملكات النحل</p></div>
-            <div class="ingredient"><img src="propolis.jpg" alt="البروبوليس"><p>العكبر (بروبوليس)</p></div>
+            <div class="ingredient"><img src="propolis.jpg" alt="البروبوليس"><p>البروبوليس (العكبر)</p></div>
           </div>
         </div>
 
@@ -180,36 +151,45 @@
         <div class="section">
           <h3>آراء الزبائن</h3>
           <div class="testimonials">
-            <div class="testi">⭐⭐⭐⭐⭐ «ولدي أصبح أكثر نشاطًا وتركيزًا بعد أسبوعين من الاستخدام» — أمينة، الجزائر</div>
-            <div class="testi">⭐⭐⭐⭐⭐ «توصيل سريع وطعم يحبه الأولاد» — سمير، وهران</div>
-            <div class="testi">⭐⭐⭐⭐⭐ «منتج ذو جودة ونوعية ممتازة» — فاطمة، قسنطينة</div>
+            <div class="testi">⭐⭐⭐⭐⭐ «ولدي أصبح أكثر نشاطًا وتركيزًا بعد أسبوعين» — أمينة، الجزائر</div>
+            <div class="testi">⭐⭐⭐⭐⭐ «توصيل سريع ونكهة يحبها الأولاد» — سمير، وهران</div>
+            <div class="testi">⭐⭐⭐⭐⭐ «جودة واضحة ونوع ممتاز» — فاطمة، قسنطينة</div>
           </div>
         </div>
 
         <div class="section">
           <h3>لماذا تشتري من مناحل وعسل آل البوسعيدي؟</h3>
           <div class="trust-grid">
-            <div class="policy"><strong>توصيل سريع</strong><p>نحاول تجهيز الطلبات خلال 24–72 ساعة داخل المدن.</p></div>
-            <div class="policy"><strong>سياسة الإرجاع</strong><p>استرجاع خلال 7 أيام عند تلف أو عدم مطابقة مع إثبات.</p></div>
-            <div class="policy"><strong>ضمان الجودة</strong><p>منتجات من مناحل موثوقة ومرشحة للفحص.</p></div>
-            <div class="policy"><strong>دعم العملاء</strong><p>دعم سريع عبر واتساب والهاتف.</p></div>
+            <div class="policy"><strong>توصيل سريع</strong><p>شحن خلال 24–72 ساعة داخل المدن.</p></div>
+            <div class="policy"><strong>سياسة الإرجاع</strong><p>استرجاع خلال 7 أيام عند تلف أو عدم مطابقة (مع صور).</p></div>
+            <div class="policy"><strong>ضمان الجودة</strong><p>منتجات من مناحل موثوقة وخضوع لفحوص قبل التعبئة.</p></div>
+            <div class="policy"><strong>دعم العملاء</strong><p>دعم عبر واتساب والهاتف لمتابعة الطلبات.</p></div>
           </div>
         </div>
       </main>
 
-      <!-- RIGHT: form -->
+      <!-- RIGHT: ORDER FORM -->
       <aside class="card" id="formCard">
-        <h3 style="text-align:center; margin-top:0">للطلب اكتب معلوماتك أسفله</h3>
+        <div class="hint">للطلب اختر العرض الذي يناسبك ثم اكتب معلوماتك في الخانات أسفله</div>
 
         <form id="orderForm">
           <div class="field">
+            <label class="label">العرض</label>
+            <select id="quantity" name="quantity" required>
+              <option value="1" selected>عبوة واحدة — 2800 دج</option>
+              <option value="2">عبوتين — 5600 دج (توصيل مجاني)</option>
+              <option value="3">3 عبوات (احصل على عبوة إضافية مجاناً) — 8400 دج (توصيل مجاني)</option>
+            </select>
+          </div>
+
+          <div class="field">
             <label class="label">الاسم الكامل</label>
-            <input name="name" id="nameField" type="text" placeholder="الاسم الكامل" required />
+            <input id="nameField" name="name" type="text" placeholder="الاسم الكامل" required>
           </div>
 
           <div class="field">
             <label class="label">رقم الهاتف</label>
-            <input name="phone" type="tel" placeholder="07XXXXXXXX" pattern="[0-9]{10}" required />
+            <input name="phone" type="tel" placeholder="07XXXXXXXX" pattern="[0-9]{10}" required>
           </div>
 
           <div class="field">
@@ -231,110 +211,87 @@
             </select>
           </div>
 
-          <div class="field">
-            <label class="label">العرض (الافتراضي: عبوة واحدة)</label>
-            <select id="quantity" name="quantity" required>
-              <option value="1" selected>1 عبوة — 2800 دج</option>
-              <option value="2">2 عبوتين — 5600 دج</option>
-              <option value="3">3 عبوات (4 شاملة مجاناً) — 8400 دج (توصيل مجاني)</option>
-            </select>
-            <div class="tiny">الافتراضي: عبوة واحدة — اختر العرض الذي يناسبك.</div>
-          </div>
-
-          <!-- Upsells -->
-          <div class="field">
-            <label class="label">منتجات إضافية (اختياري)</label>
-            <div class="upsells">
-              <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة التبول اللاارادي عند الاطفال|3200"> 
-                <img src="upsell-kids.jpg" alt="خلطة التبول">
-                <div style="text-align:right"><div style="font-weight:700">خلطة التبول اللاارادي</div><div class="tiny">3200 دج</div></div>
-              </label>
-
-              <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة القوة الجنسية للرجال|3500"> 
-                <img src="upsell-men.jpg" alt="خلطة القوة">
-                <div style="text-align:right"><div style="font-weight:700">خلطة القوة الجنسية</div><div class="tiny">3500 دج</div></div>
-              </label>
-
-              <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة التسمين الطبيعي|3000"> 
-                <img src="upsell-weight.jpg" alt="خلطة التسمين">
-                <div style="text-align:right"><div style="font-weight:700">خلطة التسمين الطبيعي</div><div class="tiny">3000 دج</div></div>
-              </label>
-
-              <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة السعال والبلغم|2800"> 
-                <img src="upsell-cough.jpg" alt="خلطة السعال">
-                <div style="text-align:right"><div style="font-weight:700">خلطة السعال والبلغم</div><div class="tiny">2800 دج</div></div>
-              </label>
-
-              <label class="upsell-item"><input type="checkbox" class="upsellChk" value="عسل الازهار|2200"> 
-                <img src="upsell-flower.jpg" alt="عسل الأزهار">
-                <div style="text-align:right"><div style="font-weight:700">عسل الأزهار (250غ)</div><div class="tiny">2200 دج</div></div>
-              </label>
-
-              <label class="upsell-item"><input type="checkbox" class="upsellChk" value="عسل السدر|4200"> 
-                <img src="upsell-sidr.jpg" alt="عسل السدر">
-                <div style="text-align:right"><div style="font-weight:700">عسل السدر (250غ)</div><div class="tiny">4200 دج</div></div>
-              </label>
-            </div>
-          </div>
-
-          <!-- hidden fields -->
-          <input type="hidden" name="upsells_selected" id="upsells_selected" />
-          <input type="hidden" name="total_price" id="total_price_field" />
-
-          <!-- summary card -->
-          <div class="summary-card" id="summaryCard">
+          <!-- summary (items + shipping + total) -->
+          <div class="summary-card">
             <div class="summary-row"><div>سعر العبوات:</div><div id="price_items">0 دج</div></div>
-            <div class="summary-row"><div>المنتجات الإضافية:</div><div id="price_upsells">0 دج</div></div>
             <div class="summary-row"><div>سعر التوصيل:</div><div id="price_shipping">0 دج</div></div>
             <div class="summary-row summary-total"><div>المجموع الكلي:</div><div id="price_total">0 دج</div></div>
           </div>
 
-          <!-- confirm under summary -->
-          <button type="submit" class="primary">✅ تأكيد الطلب الآن</button>
+          <!-- confirm button (green) - directly under summary -->
+          <button type="submit" class="confirm-btn">✅ تأكيد الطلب الآن</button>
         </form>
+
+        <!-- Upsells: بعد زر التأكيد (خارج الفورم حسب طلبك - العميل يعيد الطلب إن أراد شراء أبسلز) -->
+        <div class="section" style="margin-top:14px">
+          <h3 style="text-align:center">منتجات إضافية — إذا رغبت بطلب آخر</h3>
+          <div class="upsells-grid">
+            <div class="upsell-card">
+              <img src="upsell-kids.jpg" alt="خلطة التبول"><h4>خلطة التبول اللاارادي عند الأطفال</h4>
+              <p class="add-ask">سعر: 3200 دج</p>
+              <p class="add-ask">لإضافتها: اضغط "اطلب الآن" ثم أعد تعبئة الفورم لتأكيد طلب المنتج الإضافي.</p>
+              <button class="primary" onclick="prepReorder('خلطة التبول اللاارادي عند الاطفال|3200')">اطلب الآن</button>
+            </div>
+
+            <div class="upsell-card">
+              <img src="upsell-men.jpg" alt="خلطة القوة"><h4>خلطة القوة الجنسية للرجال</h4><p class="add-ask">3500 دج</p>
+              <p class="add-ask">للطلب اضغط ثم أعد عملية الطلب الأساسية.</p>
+              <button class="primary" onclick="prepReorder('خلطة القوة الجنسية للرجال|3500')">اطلب الآن</button>
+            </div>
+
+            <div class="upsell-card">
+              <img src="upsell-weight.jpg" alt="خلطة التسمين"><h4>خلطة التسمين الطبيعي</h4><p class="add-ask">3000 دج</p>
+              <button class="primary" onclick="prepReorder('خلطة التسمين الطبيعي|3000')">اطلب الآن</button>
+            </div>
+
+            <div class="upsell-card">
+              <img src="upsell-cough.jpg" alt="خلطة السعال"><h4>خلطة السعال والبلغم</h4><p class="add-ask">2800 دج</p>
+              <button class="primary" onclick="prepReorder('خلطة السعال والبلغم|2800')">اطلب الآن</button>
+            </div>
+
+            <div class="upsell-card">
+              <img src="upsell-flower.jpg" alt="عسل الأزهار"><h4>عسل الأزهار (250غ)</h4><p class="add-ask">2200 دج</p>
+              <button class="primary" onclick="prepReorder('عسل الازهار|2200')">اطلب الآن</button>
+            </div>
+
+            <div class="upsell-card">
+              <img src="upsell-sidr.jpg" alt="عسل السدر"><h4>عسل السدر (250غ)</h4><p class="add-ask">4200 دج</p>
+              <button class="primary" onclick="prepReorder('عسل السدر|4200')">اطلب الآن</button>
+            </div>
+          </div>
+        </div>
+
       </aside>
     </div>
 
-    <!-- related products -->
+    <!-- related products (optional) -->
     <div class="section">
       <h3>منتجات ذات صلة</h3>
-      <div class="grid" style="margin-top:12px">
+      <div class="grid">
         <div class="prod-card">
           <img src="upsell-kids.jpg" alt=""><h4>خلطة التبول اللاارادي</h4><p class="price">3200 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة التبول اللاارادي عند الاطفال|3200')">أضف للطلب</button>
+          <button class="primary" onclick="prepReorder('خلطة التبول اللاارادي عند الاطفال|3200')">اطلب الآن</button>
         </div>
         <div class="prod-card">
           <img src="upsell-men.jpg" alt=""><h4>خلطة القوة الجنسية</h4><p class="price">3500 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة القوة الجنسية للرجال|3500')">أضف للطلب</button>
+          <button class="primary" onclick="prepReorder('خلطة القوة الجنسية للرجال|3500')">اطلب الآن</button>
         </div>
         <div class="prod-card">
           <img src="upsell-weight.jpg" alt=""><h4>خلطة التسمين الطبيعي</h4><p class="price">3000 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة التسمين الطبيعي|3000')">أضف للطلب</button>
-        </div>
-        <div class="prod-card">
-          <img src="upsell-cough.jpg" alt=""><h4>خلطة السعال والبلغم</h4><p class="price">2800 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة السعال والبلغم|2800')">أضف للطلب</button>
-        </div>
-        <div class="prod-card">
-          <img src="upsell-flower.jpg" alt=""><h4>عسل الأزهار (250غ)</h4><p class="price">2200 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('عسل الازهار|2200')">أضف للطلب</button>
-        </div>
-        <div class="prod-card">
-          <img src="upsell-sidr.jpg" alt=""><h4>عسل السدر (250غ)</h4><p class="price">4200 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('عسل السدر|4200')">أضف للطلب</button>
+          <button class="primary" onclick="prepReorder('خلطة التسمين الطبيعي|3000')">اطلب الآن</button>
         </div>
       </div>
     </div>
 
-    <!-- policies -->
+    <!-- policies & shipping -->
     <div class="section">
       <h3 style="text-align:center">سياسة الإرجاع والضمان</h3>
-      <p style="max-width:900px; margin:6px auto; color:#444">يمكن استرجاع المنتج خلال 7 أيام من تاريخ الاستلام في حال وجود تلف أو عدم مطابقة — يرجى الاحتفاظ بالصور وإرسالها عبر واتساب. الضمان يغطي جودة المنتج ومصدره.</p>
+      <p style="max-width:900px;margin:6px auto;color:#444">يمكن استرجاع المنتج خلال 7 أيام من الاستلام إذا كانت العبوة تالفة أو غير مطابقة للوصف (مرفق صور). الضمان يغطي جودة المنتج ومصدره من مناحل مختارة.</p>
     </div>
 
     <div class="section">
       <h3 style="text-align:center">التوصيل السريع</h3>
-      <p style="max-width:900px; margin:6px auto; color:#444">جهزنا لوجستيك بسيط لشحن خلال 24–72 ساعة داخل المدن. التوصيل حسب الولاية (يعرض في الملخص). الشحن مجاني إذا عدد العبوات 3 أو أكثر.</p>
+      <p style="max-width:900px;margin:6px auto;color:#444">نجهّز الشحنات خلال 24–72 ساعة داخل المدن. التوصيل حسب الولاية (يحسب تلقائياً في الملخص). التوصيل مجاني عند شراء 2 عبوتين أو أكثر حسب العرض.</p>
     </div>
 
     <div class="section" style="text-align:center">
@@ -342,16 +299,16 @@
     </div>
   </div>
 
-  <!-- sticky order button (scroll to name field) -->
+  <!-- sticky order button -->
   <button class="sticky-order" onclick="goToName()">🛒 اطلب الآن</button>
 
   <footer>
     للتواصل: <a class="link" href="https://wa.me/213555000000" target="_blank">واتساب</a> — هاتف: <a class="link" href="tel:+213555000000">+213 555 000 000</a>
   </footer>
 
-  <!-- JS -->
+  <!-- JavaScript -->
   <script>
-    // Config
+    // config
     const UNIT_PRICE = 2800;
     const shippingTable = {
       "الجزائر":400,"البليدة":400,"بومرداس":400,"تيبازة":400,
@@ -369,92 +326,47 @@
     const quantityEl = document.getElementById('quantity');
     const stateEl = document.getElementById('state');
     const priceItemsEl = document.getElementById('price_items');
-    const priceUpsellsEl = document.getElementById('price_upsells');
     const priceShippingEl = document.getElementById('price_shipping');
     const priceTotalEl = document.getElementById('price_total');
-    const upsellCheckboxes = () => Array.from(document.querySelectorAll('.upsellChk'));
-    const upsellsSelectedField = document.getElementById('upsells_selected');
-    const totalPriceField = document.getElementById('total_price_field');
+    const nameField = document.getElementById('nameField');
 
-    // compute prices
+    // compute prices & update UI
     function computePrices(){
       const qty = parseInt(quantityEl.value) || 1;
       const itemsPrice = UNIT_PRICE * qty;
-
-      let upsellSum = 0;
-      let upsellNames = [];
-      upsellCheckboxes().forEach(chk => {
-        if (chk.checked){
-          const [name, priceStr] = chk.value.split('|');
-          const price = parseInt(priceStr) || 0;
-          upsellSum += price;
-          upsellNames.push(name);
-        }
-      });
-
       let shipping = shippingTable[stateEl.value] || 0;
-      if (qty >= 3) shipping = 0; // free shipping rule
-
-      const total = itemsPrice + upsellSum + shipping;
-
+      // free shipping rule for 2 or 3 per your offers
+      if (qty >= 2) shipping = 0;
+      const total = itemsPrice + shipping;
       priceItemsEl.textContent = itemsPrice + " دج";
-      priceUpsellsEl.textContent = upsellSum + " دج";
       priceShippingEl.textContent = shipping + " دج";
       priceTotalEl.textContent = total + " دج";
-
-      upsellsSelectedField.value = upsellNames.join(' | ') || "-";
-      totalPriceField.value = total;
-
-      return {qty, itemsPrice, upsellSum, shipping, total, upsellNames};
+      return {qty, itemsPrice, shipping, total};
     }
 
-    // initial binding
+    // event bindings
     quantityEl.addEventListener('change', computePrices);
     stateEl.addEventListener('change', computePrices);
-    // dynamic checkboxes binding
-    document.addEventListener('change', function(e){
-      if (e.target && e.target.classList && e.target.classList.contains('upsellChk')) computePrices();
-    });
     computePrices();
 
-    // addUpsell from related product card
-    function addUpsellAndScroll(value){
-      // find checkbox with same value
-      const chk = Array.from(document.querySelectorAll('.upsellChk')).find(c => c.value === value);
-      if (chk){
-        chk.checked = true;
-        computePrices();
-        // scroll to form and focus name
-        document.getElementById('nameField').scrollIntoView({behavior:'smooth', block:'center'});
-        document.getElementById('nameField').focus();
-      } else {
-        alert('تمت إضافة المنتج إلى الطلب. تحقق داخل الفورم.');
-      }
-    }
-
-    // sticky button scroll to name field
+    // sticky button scroll to name
     function goToName(){
-      const el = document.getElementById('nameField');
-      if (el){
-        el.scrollIntoView({behavior:'smooth', block:'center'});
-        el.focus();
-      } else {
-        window.scrollTo({top:0, behavior:'smooth'});
-      }
+      if (nameField){
+        nameField.scrollIntoView({behavior:'smooth',block:'center'});
+        nameField.focus();
+      } else window.scrollTo({top:0,behavior:'smooth'});
     }
 
-    // submit form -> send to WebApp (Google Apps Script)
+    // submit main form (only main product) -> send to WebApp
     document.getElementById('orderForm').addEventListener('submit', function(e){
       e.preventDefault();
-
-      // phone validation (10 digits)
+      // validate phone
       const phone = this.phone.value.trim();
       if(!/^[0-9]{10}$/.test(phone)){
         alert('رجاءً أدخل رقم هاتف صالح مكوّن من 10 أرقام (مثال: 0790123456).');
         this.phone.focus();
         return;
       }
-
       const data = computePrices();
       const payload = {
         name: this.name.value.trim(),
@@ -462,14 +374,12 @@
         state: this.state.value,
         quantity: data.qty,
         price_items: data.itemsPrice,
-        upsells: data.upsellNames.join(' | '),
-        price_upsells: data.upsellSum,
         shipping_price: data.shipping,
         total_price: data.total,
-        source: "landing_index"
+        source: "landing_index_main_product"
       };
 
-      // <-- ضع هنا رابط Google Apps Script WebApp الخاص بك (doPost) -->
+      // ضع هنا رابط Google Apps Script WebApp الخاص بك (doPost) أو endpoint آخر
       const WEBAPP_URL = "YOUR_GOOGLE_SHEET_WEBAPP_URL";
 
       const formData = new FormData();
@@ -477,13 +387,46 @@
 
       fetch(WEBAPP_URL, { method: "POST", body: formData })
         .then(resp => {
-          // توجيه لصفحة الشكر بعد الإرسال
+          // بعد نجاح الإرسال: وجه المستخدم لصفحة الشكر
           window.location.href = "thankyou.html";
         })
         .catch(err => {
           console.error(err);
           alert('حصل خطأ أثناء إرسال الطلب. حاول مرة أخرى أو تواصل عبر واتساب.');
         });
+    });
+
+    // PREPARE RE-ORDER for upsell: prefill localStorage with upsell info + scroll to form
+    function prepReorder(value){
+      // value format "name|price"
+      localStorage.setItem('reorder_item', value);
+      alert('تم اختيار المنتج الإضافي — بعد الضغط OK ستنتقل تلقائياً إلى نموذج الطلب لإكمال العملية.');
+      // scroll to form and prefill quantity=1 and name focus
+      document.getElementById('quantity').value = "1";
+      computePrices();
+      goToName();
+      // optionally prefill name/phone if saved before (left to browser)
+    }
+
+    // on page load: if reorder_item exists, show small banner to user
+    window.addEventListener('load', function(){
+      const r = localStorage.getItem('reorder_item');
+      if (r){
+        const [label, price] = r.split('|');
+        // show a subtle prompt bar above form
+        const bar = document.createElement('div');
+        bar.style.background = "#fff3cd";
+        bar.style.border = "1px solid #ffeeba";
+        bar.style.padding = "10px";
+        bar.style.borderRadius = "8px";
+        bar.style.marginBottom = "12px";
+        bar.innerHTML = `<strong>لقد اخترت:</strong> ${label} — ${price} دج. لإتمام طلب هذا المنتج، أكمل بياناتك في الأسفل واضغط "تأكيد الطلب الآن".`;
+        const formCard = document.getElementById('formCard');
+        formCard.insertBefore(bar, formCard.firstChild);
+        // remove stored reorder after showing (so second submission is explicit)
+        // keep it so user can submit; remove after 60s to avoid stale
+        setTimeout(()=> localStorage.removeItem('reorder_item'), 60000);
+      }
     });
   </script>
 </body>
