@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>خلطة العسل وحبوب اللقاح للأطفال — دعم النمو والتركيز | مناحل وعسل آل البوسعيدي</title>
+  <title>خلطة العسل وحبوب اللقاح للأطفال — دعم النمو، التركيز والنوم الهادئ | مناحل وعسل آل البوسعيدي</title>
 
   <!-- SEO -->
-  <meta name="description" content="اشترِ خلطة العسل وحبوب اللقاح للأطفال لتعزيز النمو، التركيز، النشاط الذهني، النوم الهادئ وزيادة الشهية. توصيل سريع والطلب سهل عبر هذه الصفحة." />
-  <meta name="keywords" content="عسل للأطفال, خلطة عسل, حبوب اللقاح, غذاء ملكات النحل, عسل السدر, عسل الأزهار, زيادة التركيز, نمو الأطفال, مناحل وعسل آل البوسعيدي" />
+  <meta name="description" content="اشترِ خلطة العسل وحبوب اللقاح للأطفال لتعزيز النمو، التركيز، النشاط الذهني والنوم الهادئ بطريقة طبيعية. توصيل سريع والدفع عند الاستلام." />
+  <meta name="keywords" content="عسل للأطفال, خلطة العسل, حبوب اللقاح, غذاء ملكات النحل, عسل السدر, عسل الأزهار, نمو الأطفال, زيادة التركيز, مناحل آل البوسعيدي" />
   <meta property="og:title" content="خلطة العسل وحبوب اللقاح للأطفال — دعم النمو والتركيز" />
   <meta property="og:description" content="اطلب خلطة العسل وحبوب اللقاح لتعزيز النشاط والتركيز والنوم الهادئ للأطفال. التوصيل سريع والدفع عند الاستلام." />
   <meta property="og:image" content="product.jpg" />
 
-  <!-- Fonts (system-friendly fallback) -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -38,48 +38,32 @@
       line-height:1.55;
     }
     a{color:inherit}
-
     .wrap{width:94%; max-width:var(--maxw); margin:0 auto; padding:16px;}
     .topbar{
       background:#e33b2f; color:#fff;
       padding:10px 14px; text-align:center; font-weight:700;
-      border-radius:10px;
-      margin-top:12px;
+      border-radius:10px; margin-top:12px;
     }
 
-    /* sticky contact buttons (left on desktop, bottom on mobile) */
+    /* contact fixed buttons */
     .contact-fixed{position:fixed; left:14px; top:90px; display:flex; flex-direction:column; gap:10px; z-index:999}
     .contact-fixed a{display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; text-decoration:none; color:#fff; font-size:18px}
     .wa{background:#25D366}
     .phone{background:#007bff}
-    @media (max-width:760px){
-      .contact-fixed{left:unset; right:14px; top:auto; bottom:80px; flex-direction:row}
-    }
+    @media (max-width:760px){ .contact-fixed{left:auto; right:14px; bottom:120px; top:auto; flex-direction:row} }
 
-    /* HERO */
-    .hero{
-      background:var(--card);
-      padding:20px;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      margin-top:18px;
-      text-align:center;
-    }
-    .hero img.product{
-      width:160px; max-width:46%;
-      height:auto; display:block; margin:0 auto 12px; border-radius:10px;
-    }
-    .hero h1{
-      margin:6px 0; font-size:22px; font-weight:800; color:#2d2d2d;
-    }
+    /* hero */
+    .hero{background:var(--card); padding:20px; border-radius:var(--radius); box-shadow:var(--shadow); margin-top:18px; text-align:center}
+    .hero img.product{width:160px; max-width:48%; height:auto; display:block; margin:0 auto 12px; border-radius:10px}
+    .hero h1{margin:6px 0; font-size:22px; font-weight:800; color:#2d2d2d}
     .hero h2{margin:6px 0; font-size:15px; color:var(--muted); font-weight:600}
     .hero p.lead{max-width:920px; margin:10px auto; color:#333; font-size:15px}
 
-    /* layout columns */
+    /* layout */
     .cols{display:grid; grid-template-columns:1fr 420px; gap:20px; margin-top:18px; align-items:start}
     @media (max-width:980px){ .cols{grid-template-columns:1fr} }
 
-    /* FORM CARD */
+    /* form card */
     .card{background:var(--card); padding:18px; border-radius:var(--radius); box-shadow:var(--shadow)}
     .label{font-weight:700; display:block; margin-bottom:6px; color:#333}
     input[type=text], input[type=tel], select{
@@ -99,14 +83,14 @@
     .primary:active{transform:translateY(1px)}
     .tiny{font-size:13px; color:var(--muted)}
 
-    /* related products grid */
+    /* related products */
     .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px}
     .prod-card{background:var(--card); padding:12px; text-align:center; border-radius:10px; border:1px solid #f0e1b8}
     .prod-card img{width:100%; max-width:140px; height:auto; margin:0 auto 8px; border-radius:8px}
     .prod-card h4{margin:6px 0; font-size:16px}
     .prod-card p.price{font-weight:800; color:var(--accent); margin:6px 0}
 
-    /* content sections */
+    /* sections */
     .section{margin-top:26px}
     .section h3{text-align:center; margin-bottom:14px; font-size:20px}
     .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px}
@@ -125,17 +109,17 @@
 
     footer{margin-top:28px; padding:18px; text-align:center; background:#111; color:#fff; border-radius:8px}
 
-    /* sticky "Order Now" button bottom-right on mobile, left on desktop */
+    /* sticky order button */
     .sticky-order{
       position:fixed; right:18px; bottom:18px; z-index:9999;
-      background:var(--accent); color:#fff; padding:14px 16px; border-radius:50px; box-shadow:0 8px 20px rgba(0,0,0,0.15); border:0; font-weight:700; cursor:pointer;
+      background:var(--accent); color:#fff; padding:12px 14px; border-radius:50px; box-shadow:0 8px 20px rgba(0,0,0,0.15); border:0; font-weight:700; cursor:pointer;
     }
     @media(min-width:980px){ .sticky-order{right:18px; bottom:18px} }
     @media(max-width:480px){ .sticky-order{right:12px; bottom:12px; padding:12px 14px} }
 
-    /* center sections on mobile */
+    /* center everything on small screens */
     @media (max-width:760px){
-      .hero, .card, .section, .prod-card { text-align: center; }
+      .hero, .card, .section, .prod-card { text-align:center; }
       .wrap { padding:12px; }
     }
   </style>
@@ -146,7 +130,7 @@
     <div class="topbar">عرض محدود — التوصيل مجاني عند شراء 3 عبوات فأكثر • الدفع عند الاستلام</div>
   </div>
 
-  <!-- sticky contact -->
+  <!-- Contact buttons -->
   <div class="contact-fixed">
     <a class="wa" href="https://wa.me/213555000000" target="_blank" rel="noopener" title="واتساب">💬</a>
     <a class="phone" href="tel:+213555000000" title="اتصل">📞</a>
@@ -156,69 +140,64 @@
     <!-- HERO -->
     <div class="hero">
       <img class="product" src="product.jpg" alt="خلطة العسل وحبوب اللقاح للأطفال">
-      <h1>خلطة العسل وحبوب اللقاح للأطفال — دعم النمو والتركيز والحيوية</h1>
-      <h2>مزيج مختار بعناية يعزز النشاط الذهني، الحفظ، النوم الهادئ وزيادة الشهية بلمسة طبيعية</h2>
-      <p class="lead">منتج طبيعي ذو جودة عالية من مناحل مختارة — مناسب للاستخدام اليومي للأطفال. <strong>للطلب اكتب معلوماتك أسفله</strong>.</p>
+      <h1>خلطة العسل وحبوب اللقاح للأطفال — مزيج مغذي لدعم النمو، التركيز والنشاط اليومي</h1>
+      <h2>تركيبة طبيعية من العسل الجبلي وحبوب اللقاح وغذاء ملكات النحل — لزيادة الحيوية، الحفظ والنوم الهادئ</h2>
+      <p class="lead">منتج آمن ومختار بعناية من مناحل موثوقة. <strong>للطلب اكتب معلوماتك أسفله</strong>.</p>
     </div>
 
-    <!-- columns: content + form -->
+    <!-- Columns: content + form -->
     <div class="cols">
       <!-- LEFT content -->
       <main>
-        <!-- benefits teaser -->
         <div class="section">
-          <h3>لماذا تختار خلطة العسل وحبوب اللقاح؟</h3>
+          <h3>فوائد الخلطة (شرح مفصل)</h3>
           <div class="features">
-            <div class="feature"><strong>دعم النمو</strong><p>مكونات مغذية للمساهمة في النشاط اليومي والنمو السليم.</p></div>
-            <div class="feature"><strong>تحسين التركيز</strong><p>مزيج يساهم في دعم التركيز خلال وقت الدراسة والواجب.</p></div>
-            <div class="feature"><strong>نشاط ذهني</strong><p>طاقة متوازنة دون إجهاد لتعزيز اليقظة النفسية.</p></div>
-            <div class="feature"><strong>نوم هادئ</strong><p>تناول مناسب يساعد على الاسترخاء المساوي لنوم هادئ.</p></div>
-            <div class="feature"><strong>زيادة الشهية</strong><p>نكهة مقبولة تشجع الأطفال على تناول الوجبات.</p></div>
-            <div class="feature"><strong>ضمان جودة</strong><p>مناحل مُختارة وفحوصات نوعية قبل التعبئة.</p></div>
+            <div class="feature"><strong>دعم النمو</strong><p>مولّد طاقة ومواد مغذية تساعد على النشاط اليومي ودعم مسار نمو صحي للأطفال.</p></div>
+            <div class="feature"><strong>تحسين التركيز</strong><p>مكونات طبيعية تساهم في مساعدة الطفل على التركيز أثناء الدراسة واللعب.</p></div>
+            <div class="feature"><strong>نشاط ذهني متوازن</strong><p>طاقة خفيفة تعزز اليقظة دون إجهاد أو اضطراب النوم.</p></div>
+            <div class="feature"><strong>نوم هادئ</strong><p>تناول منتظم بطريقة مناسبة قد يساعد بعض الأطفال على الاسترخاء والنوم براحة.</p></div>
+            <div class="feature"><strong>زيادة الشهية</strong><p>نكهة محببة تقنع الأطفال بتناول الوجبات بشكل طبيعي أكثر.</p></div>
+            <div class="feature"><strong>جودة ومصدر موثوق</strong><p>مناحل مختارة وفحوص نوعية قبل التعبئة لضمان منتج آمن.</p></div>
           </div>
         </div>
 
-        <!-- ingredients -->
         <div class="section">
-          <h3>المكونات الطبيعية</h3>
+          <h3>المكونات الرئيسية</h3>
           <div class="ingredients">
             <div class="ingredient"><img src="honey.jpg" alt="العسل الجبلي"><p>العسل الجبلي</p></div>
-            <div class="ingredient"><img src="pollen.jpg" alt="حبوب اللقاح"><p>حبوب اللقاح الطازجة</p></div>
+            <div class="ingredient"><img src="pollen.jpg" alt="حبوب اللقاح"><p>حبوب اللقاح</p></div>
             <div class="ingredient"><img src="royaljelly.jpg" alt="غذاء ملكات النحل"><p>غذاء ملكات النحل</p></div>
             <div class="ingredient"><img src="propolis.jpg" alt="البروبوليس"><p>العكبر (بروبوليس)</p></div>
           </div>
         </div>
 
-        <!-- emotional image -->
         <div class="section" style="text-align:center">
           <img class="hero-image" src="mother-child.jpg" alt="أم تطعم طفلها العسل في الطبيعة">
         </div>
 
-        <!-- testimonials -->
         <div class="section">
-          <h3>آراء زبائننا</h3>
+          <h3>آراء الزبائن</h3>
           <div class="testimonials">
-            <div class="testi">⭐⭐⭐⭐⭐ «ولدي أصبح أكثر نشاطًا وتركيزًا بعد استخدام الخلطة» — أمينة، الجزائر</div>
-            <div class="testi">⭐⭐⭐⭐⭐ «خدمة سريعة ونوعية ممتازة» — سمير، وهران</div>
-            <div class="testi">⭐⭐⭐⭐⭐ «نكهة محببة وصديقة للأطفال» — فاطمة، قسنطينة</div>
+            <div class="testi">⭐⭐⭐⭐⭐ «المنتج رائع — طفلي أصبح نشيطاً أكثر» — أمينة، الجزائر</div>
+            <div class="testi">⭐⭐⭐⭐⭐ «توصيل سريع وطعم ممتاز» — سمير، وهران</div>
+            <div class="testi">⭐⭐⭐⭐⭐ «جودة واضحة ونكهة يحبها الأولاد» — فاطمة، قسنطينة</div>
           </div>
         </div>
 
-        <!-- trust & policies -->
         <div class="section">
-          <h3>الطمأنة وسياسة الإرجاع والضمان</h3>
+          <h3>لماذا تشتري من مناحل وعسل آل البوسعيدي؟</h3>
           <div class="trust-grid">
-            <div class="policy"><strong>التوصيل السريع</strong><p>نجهز الشحنات خلال 24–72 ساعة داخل المدن. التوصيل حسب الولاية.</p></div>
-            <div class="policy"><strong>سياسة الإرجاع</strong><p>إمكانية الاسترجاع خلال 7 أيام عند وجود تلف أو عدم مطابقة (صور + إثبات).</p></div>
-            <div class="policy"><strong>ضمان الجودة</strong><p>منتج مختار من مناحل موثوقة مع تحاليل جودة.</p></div>
-            <div class="policy"><strong>دعم عملاء</strong><p>دعم سريع عبر واتساب والهاتف لتأكيد الطلبات ومتابعتها.</p></div>
+            <div class="policy"><strong>توصيل سريع</strong><p>شحن خلال 24–72 ساعة في المدن.</p></div>
+            <div class="policy"><strong>سياسة الإرجاع</strong><p>إمكانية الاسترجاع خلال 7 أيام في حالات التلف أو عدم المطابقة.</p></div>
+            <div class="policy"><strong>ضمان الجودة</strong><p>منتجات من مناحل موثوقة وفحوص نوعية.</p></div>
+            <div class="policy"><strong>دعم سريع</strong><p>دعم عبر واتساب والهاتف لمتابعة الطلبات.</p></div>
           </div>
         </div>
       </main>
 
-      <!-- RIGHT = ORDER FORM -->
+      <!-- RIGHT: order form -->
       <aside class="card">
-        <h3 style="text-align:center; margin-top:0">اطلب الآن — سهل وآمن</h3>
+        <h3 style="text-align:center; margin-top:0">اطلب الآن — سريع وآمن</h3>
 
         <form id="orderForm">
           <div class="field">
@@ -257,125 +236,107 @@
               <option value="2">2 عبوتين — 5600 دج</option>
               <option value="3">3 عبوات (4 شاملة مجاناً) — 8400 دج (توصيل مجاني)</option>
             </select>
-            <div class="tiny">اختر العرض الذي يناسبك — العبوة الواحدة محددة افتراضياً.</div>
+            <div class="tiny">الافتراضي: عبوة واحدة — اختر العرض الذي يناسبك.</div>
           </div>
 
-          <!-- upsells (checkboxes) -->
+          <!-- Upsells (checkboxes) -->
           <div class="field">
             <label class="label">منتجات إضافية (اختياري)</label>
             <div class="upsells">
               <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة التبول اللاارادي عند الاطفال|3200"> 
                 <img src="upsell-kids.jpg" alt="خلطة التبول">
-                <div style="text-align:right">
-                  <div style="font-weight:700">خلطة التبول اللاارادي (للأطفال)</div>
-                  <div class="tiny">3200 دج</div>
-                </div>
+                <div style="text-align:right"><div style="font-weight:700">خلطة التبول اللاارادي (للأطفال)</div><div class="tiny">3200 دج</div></div>
               </label>
 
               <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة القوة الجنسية للرجال|3500"> 
                 <img src="upsell-men.jpg" alt="خلطة القوة">
-                <div style="text-align:right">
-                  <div style="font-weight:700">خلطة القوة الجنسية (للرجال)</div>
-                  <div class="tiny">3500 دج</div>
-                </div>
+                <div style="text-align:right"><div style="font-weight:700">خلطة القوة الجنسية (للرجال)</div><div class="tiny">3500 دج</div></div>
               </label>
 
               <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة التسمين الطبيعي|3000"> 
                 <img src="upsell-weight.jpg" alt="خلطة التسمين">
-                <div style="text-align:right">
-                  <div style="font-weight:700">خلطة التسمين الطبيعي</div>
-                  <div class="tiny">3000 دج</div>
-                </div>
+                <div style="text-align:right"><div style="font-weight:700">خلطة التسمين الطبيعي</div><div class="tiny">3000 دج</div></div>
               </label>
 
               <label class="upsell-item"><input type="checkbox" class="upsellChk" value="خلطة السعال والبلغم|2800"> 
                 <img src="upsell-cough.jpg" alt="خلطة السعال">
-                <div style="text-align:right">
-                  <div style="font-weight:700">خلطة السعال والبلغم</div>
-                  <div class="tiny">2800 دج</div>
-                </div>
+                <div style="text-align:right"><div style="font-weight:700">خلطة السعال والبلغم</div><div class="tiny">2800 دج</div></div>
               </label>
 
               <label class="upsell-item"><input type="checkbox" class="upsellChk" value="عسل الازهار|2200"> 
                 <img src="upsell-flower.jpg" alt="عسل الأزهار">
-                <div style="text-align:right">
-                  <div style="font-weight:700">عسل الأزهار (250غ)</div>
-                  <div class="tiny">2200 دج</div>
-                </div>
+                <div style="text-align:right"><div style="font-weight:700">عسل الأزهار (250غ)</div><div class="tiny">2200 دج</div></div>
               </label>
 
               <label class="upsell-item"><input type="checkbox" class="upsellChk" value="عسل السدر|4200"> 
                 <img src="upsell-sidr.jpg" alt="عسل السدر">
-                <div style="text-align:right">
-                  <div style="font-weight:700">عسل السدر (250غ)</div>
-                  <div class="tiny">4200 دج</div>
-                </div>
+                <div style="text-align:right"><div style="font-weight:700">عسل السدر (250غ)</div><div class="tiny">4200 دج</div></div>
               </label>
             </div>
           </div>
 
-          <!-- hidden fields for send -->
+          <!-- hidden fields to send -->
           <input type="hidden" name="upsells_selected" id="upsells_selected" />
           <input type="hidden" name="total_price" id="total_price_field" />
 
-          <!-- summary -->
-          <div class="summary-card">
+          <!-- summary card -->
+          <div class="summary-card" id="summaryCard">
             <div class="summary-row"><div>سعر العبوات:</div><div id="price_items">0 دج</div></div>
             <div class="summary-row"><div>المنتجات الإضافية:</div><div id="price_upsells">0 دج</div></div>
             <div class="summary-row"><div>سعر التوصيل:</div><div id="price_shipping">0 دج</div></div>
             <div class="summary-row summary-total"><div>المجموع الكلي:</div><div id="price_total">0 دج</div></div>
           </div>
 
-          <!-- confirm button (directly under form) -->
+          <!-- confirm button directly under summary -->
           <button type="submit" class="primary">✅ تأكيد الطلب الآن</button>
         </form>
       </aside>
     </div>
 
-    <!-- products related (after the form) -->
+    <!-- After form: related products (user can add and re-order by adding then submit again) -->
     <div class="section">
-      <h3>منتجات ذات صلة قد تهمك</h3>
+      <h3>منتجات ذات صلة</h3>
       <div class="grid" style="margin-top:12px">
         <div class="prod-card">
           <img src="upsell-kids.jpg" alt="خلطة التبول"><h4>خلطة التبول اللاارادي</h4><p class="price">3200 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة التبول اللاارادي عند الاطفال|3200')">اطلب الآن</button>
+          <button class="primary" onclick="addUpsellAndScroll('خلطة التبول اللاارادي عند الاطفال|3200')">أضف إلى الطلب</button>
         </div>
         <div class="prod-card">
           <img src="upsell-men.jpg" alt="خلطة القوة"><h4>خلطة القوة الجنسية</h4><p class="price">3500 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة القوة الجنسية للرجال|3500')">اطلب الآن</button>
+          <button class="primary" onclick="addUpsellAndScroll('خلطة القوة الجنسية للرجال|3500')">أضف إلى الطلب</button>
         </div>
         <div class="prod-card">
           <img src="upsell-weight.jpg" alt="التسمين"><h4>خلطة التسمين الطبيعي</h4><p class="price">3000 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة التسمين الطبيعي|3000')">اطلب الآن</button>
+          <button class="primary" onclick="addUpsellAndScroll('خلطة التسمين الطبيعي|3000')">أضف إلى الطلب</button>
         </div>
         <div class="prod-card">
           <img src="upsell-cough.jpg" alt="السعال"><h4>خلطة السعال والبلغم</h4><p class="price">2800 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('خلطة السعال والبلغم|2800')">اطلب الآن</button>
+          <button class="primary" onclick="addUpsellAndScroll('خلطة السعال والبلغم|2800')">أضف إلى الطلب</button>
         </div>
         <div class="prod-card">
           <img src="upsell-flower.jpg" alt="عسل الأزهار"><h4>عسل الأزهار (250غ)</h4><p class="price">2200 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('عسل الازهار|2200')">اطلب الآن</button>
+          <button class="primary" onclick="addUpsellAndScroll('عسل الازهار|2200')">أضف إلى الطلب</button>
         </div>
         <div class="prod-card">
           <img src="upsell-sidr.jpg" alt="عسل السدر"><h4>عسل السدر (250غ)</h4><p class="price">4200 دج</p>
-          <button class="primary" onclick="addUpsellAndScroll('عسل السدر|4200')">اطلب الآن</button>
+          <button class="primary" onclick="addUpsellAndScroll('عسل السدر|4200')">أضف إلى الطلب</button>
         </div>
       </div>
     </div>
 
-    <!-- Footer policies -->
+    <!-- Policies/Shipping/Right -->
     <div class="section">
       <h3 style="text-align:center">سياسة الإرجاع والضمان</h3>
-      <p style="max-width:900px; margin:6px auto; color:#444">يمكن استرجاع المنتج خلال 7 أيام من الاستلام في حالة وجود تلف واضح أو عدم مطابقة — يرجى الاحتفاظ بالصور وإرسالها عبر واتساب. الضمان يغطي جودة المنتج ومصدره من مناحل موثوقة.</p>
+      <p style="max-width:900px; margin:6px auto; color:#444">يمكن استرجاع المنتج خلال 7 أيام من تاريخ الاستلام في حال وجود تلف أو عدم مطابقة — مع صور ودليل الشحنة. الضمان يغطي جودة المنتج ومصدره من مناحل موثوقة.</p>
     </div>
 
     <div class="section">
       <h3 style="text-align:center">التوصيل السريع</h3>
-      <p style="max-width:900px; margin:6px auto; color:#444">نسعى لشحن الطلبات في 24–72 ساعة داخل المدن. التوصيل حسب الولاية (يظهر بالسعر في ملخص الطلب).</p>
+      <p style="max-width:900px; margin:6px auto; color:#444">نجهّز الشحنات خلال 24–72 ساعة داخل المدن. التوصيل حسب الولاية (يُحسب في ملخص الطلب). الشحن مجاني إذا عدد العبوات 3 أو أكثر.</p>
     </div>
 
     <div class="section" style="text-align:center">
-      <p style="color:#444">© 2025 مناحل وعسل آل البوسعيدي</p>
+      <p style="color:#444">© 2025 مناحل وعسل آل البوسعيدي — جميع الحقوق محفوظة</p>
     </div>
   </div>
 
@@ -386,9 +347,9 @@
     للتواصل: <a class="link" href="https://wa.me/213555000000" target="_blank">واتساب</a> — هاتف: <a class="link" href="tel:+213555000000">+213 555 000 000</a>
   </footer>
 
-  <!-- JS -->
+  <!-- JS: حساب الاسعار، اضافة الابسلز، ارسال الفورم -->
   <script>
-    // ثابتات
+    // إعدادات الأسعار
     const UNIT_PRICE = 2800;
     const shippingTable = {
       "الجزائر":400,"البليدة":400,"بومرداس":400,"تيبازة":400,
@@ -402,7 +363,7 @@
       "جانت":1300,"إن صالح":1300,"برج باجي مختار":1300
     };
 
-    // عناصر
+    // DOM elements
     const quantityEl = document.getElementById('quantity');
     const stateEl = document.getElementById('state');
     const priceItemsEl = document.getElementById('price_items');
@@ -413,7 +374,7 @@
     const upsellsSelectedField = document.getElementById('upsells_selected');
     const totalPriceField = document.getElementById('total_price_field');
 
-    // compute prices & update UI
+    // compute prices
     function computePrices(){
       const qty = parseInt(quantityEl.value) || 1;
       const itemsPrice = UNIT_PRICE * qty;
@@ -445,30 +406,31 @@
       return {qty, itemsPrice, upsellSum, shipping, total, upsellNames};
     }
 
-    // update on changes
+    // event listeners
     quantityEl.addEventListener('change', computePrices);
     stateEl.addEventListener('change', computePrices);
-    upsellCheckboxes.forEach(cb => cb.addEventListener('change', computePrices));
+    // add listeners for dynamically present checkboxes
+    document.querySelectorAll('.upsellChk').forEach(cb => cb.addEventListener('change', computePrices));
     computePrices();
 
-    // add upsell via related product buttons
+    // add upsell from related products
     function addUpsellAndScroll(value){
-      const chk = upsellCheckboxes.find(c => c.value === value);
+      const chk = Array.from(document.querySelectorAll('.upsellChk')).find(c => c.value === value);
       if (chk){
         chk.checked = true;
         computePrices();
         document.getElementById('orderForm').scrollIntoView({behavior:'smooth', block:'center'});
         chk.focus();
       } else {
-        alert('تم إضافة المنتج. يمكنك تحديده داخل الفورم إذا لم يظهر مفعلًا.');
+        alert('تمت إضافة المنتج. تأكّد من تفعيله داخل الفورم.');
       }
     }
 
-    // send form to WebApp (Google Apps Script) — ضع رابطك
+    // submit form -> send to WebApp (Google Apps Script)
     document.getElementById('orderForm').addEventListener('submit', function(e){
       e.preventDefault();
 
-      // validate phone
+      // validation phone
       const phone = this.phone.value.trim();
       if(!/^[0-9]{10}$/.test(phone)){
         alert('رجاءً أدخل رقم هاتف صالح مكوّن من 10 أرقام (مثال: 0790123456).');
@@ -490,13 +452,16 @@
         source: "landing_index"
       };
 
-      const WEBAPP_URL = "YOUR_GOOGLE_SHEET_WEBAPP_URL"; // <-- ضع هنا رابط WebApp الخاص بك
+      // ضع هنا رابط Google Apps Script WebApp أو endpoint الخاص بك:
+      const WEBAPP_URL = "YOUR_GOOGLE_SHEET_WEBAPP_URL";
 
       const formData = new FormData();
       for(const k in payload) formData.append(k, payload[k]);
 
       fetch(WEBAPP_URL, { method: "POST", body: formData })
         .then(resp => {
+          // بعد الإرسال، نوجّه المستخدم إلى صفحة الشكر
+          // المستخدم يمكنه العودة للصفحة و"إضافة منتجات إضافية" ثم إعادة الطلب (كما أردت)
           window.location.href = "thankyou.html";
         })
         .catch(err => {
