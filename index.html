@@ -5,6 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عسل الأطفال: طاقة وذكاء ونمو صحي</title>
     <style>
+  form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: Arial, sans-serif;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+  }
+
+  input:focus, select:focus {
+    border-color: #28a745;
+    outline: none;
+  }
+
+  #summary {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 15px;
+  }
+
+  button:hover {
+    background: #218838;
+  }
+</style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
         :root {
@@ -710,6 +760,7 @@
 </style>
 
 <form id="orderForm" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSepnNx6IBDOcwYu1h1ITUVMVdZ8-YGo7bj9MbEosnUDcyrDQg/formResponse" target="hidden_iframe" onsubmit="return handleSubmit()">
+
   <!-- الاسم الكامل -->
   <input type="text" name="entry.527034430" id="name" placeholder="الاسم الكامل" required>
 
@@ -779,7 +830,7 @@
     <option value="المنيعة">المنيعة</option>
   </select>
 
-  <!-- السعر الكلي (يظهر للزبون فقط) -->
+  <!-- السعر الكلي -->
   <div id="summary" style="margin-top:15px; padding:10px; border:1px solid #ddd; border-radius:5px;">
     <strong>ملخص الطلبية:</strong>
     <p id="totalPrice">السعر الكلي: -</p>
@@ -1158,7 +1209,12 @@ function redirectToThankYou() {
 
 
 
+
+
+
+
     
+
 
 
 
